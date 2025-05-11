@@ -7,11 +7,11 @@ const ThankYouPage = () => {
       <div className="row justify-content-center align-items-center">
         <div className="col-md-6">
           <img
-            src="/bjj40-images/bjjchamp-nz.png"
+            src="/images/bjjchamp-nz.png"
             alt="Champion"
             className="img-fluid mb-3"
           />
-          <h1 className="fw-bold">Obrigado! Entendo que a Mentoria Elite BJJ 40+ não é para você agora, e tudo bem!</h1>
+          <h1 className="fw-bold">Parabéns por adquirir a Mentoria Elite BJJ 40+!</h1>
           <p className="mt-2 text-muted">
             Seu acesso foi confirmado ao curso adquirido. Em breve, você receberá todas as informações no seu e-mail.
           </p>

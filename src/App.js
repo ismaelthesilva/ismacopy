@@ -19,6 +19,9 @@ import BJJ40BR from './pages/landingPages/bjjbr/BJJ40BR';
 import BJJMentoria from './pages/landingPages/bjjbr/BJJMentoria';
 import Obrigado from './pages/landingPages/bjjbr/Obrigado';
 import ObrigadoUpsell from './pages/landingPages/bjjbr/ObrigadoUpsell';
+import Pagamento from './pages/landingPages/br/aguardando-pagamento';
+import Processada from './pages/landingPages/br/compra-esta-sendo-processada';
+import Concluida from './pages/landingPages/br/compra-concluida';
 import { Outlet } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import './i18n/i18n';
@@ -78,6 +81,9 @@ function App() {
             <Route path="/Obrigado" element={<Obrigado />} />
             <Route path="/ObrigadoUpsell" element={<ObrigadoUpsell />} />
             <Route path="/worldinjapan" element={<WorldinJapan />} />
+            <Route path="/aguardando-pagamento" element={<Pagamento />} />
+            <Route path="/compra-esta-sendo-processada" element={<Processada />} />
+            <Route path="/compra-concluida" element={<Concluida />} />
           </Route>
         </Routes>
       </Router>

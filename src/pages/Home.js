@@ -1,11 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'; // Custom CSS
 
 function Home() {
-  const { t } = useTranslation();
 
   return (
     <>

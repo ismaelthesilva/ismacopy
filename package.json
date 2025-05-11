@@ -21,6 +21,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@vercel/postgres": "^0.7.2",
     "ajv-formats": "^3.0.1",
+    "animate.css": "^4.1.1",
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
