@@ -1,10 +1,12 @@
-import React from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap';
 // import { useTranslation } from 'react-i18next';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'; // Custom CSS
 
 function Home() {
+  // Add state for the learn more modal
+  const [showLearnMore, setShowLearnMore] = useState(false);
 
   return (
     <>
@@ -38,10 +40,6 @@ function Home() {
             </Col>
           </Row>
         </Container>
-        {/* Rocket image positioned to the side */}
-        <div className="rocket-image" style={{ position: 'absolute', right: '10%', height: '60%', bottom: '0' }}>
-          <img src="/images/rocket.png" alt="Rocket" style={{ height: '100%', objectFit: 'contain' }} />
-        </div>
       </div>
 
       {/* Services Section */}
@@ -112,11 +110,69 @@ function Home() {
               <p>
                 Unlike the many copywriting firms with compelling promises but few results, we're devoted to bringing you real business outcomes you can bank on. Our methods are proven across industries, ensuring you hit your marketing goals.
               </p>
-              <Button variant="outline-light" className="mt-3">Learn More</Button>
+              <Button 
+                variant="outline-light" 
+                className="mt-3"
+                onClick={() => setShowLearnMore(true)}
+              >
+                Learn More
+              </Button>
             </Col>
           </Row>
         </Container>
       </section>
+      
+      {/* Learn More Modal */}
+      <Modal 
+        show={showLearnMore} 
+        onHide={() => setShowLearnMore(false)} 
+        size="lg"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4 className="mb-0">Turning Words into Money</h4>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h5 className="mb-3">Elevate Your Brand with Copywriting Services</h5>
+          
+          <p>Unleash the power of our comprehensive service offerings:</p>
+          
+          <ol className="service-list mt-4">
+            <li className="mb-3">
+              <strong>Creative Video:</strong> Captivate your audience with a brief, compelling video designed to pique interest, featuring a strategic script enriched with hooks, CTAs, and an emotional connection that addresses their problems.
+            </li>
+            
+            <li className="mb-3">
+              <strong>Landing Page:</strong> Your potential clients will seamlessly transition to a meticulously crafted landing page, a crucial step housing a captivating VSL and an audited persuasive sales page.
+            </li>
+            
+            <li className="mb-3">
+              <strong>VSL (Video Sales Letter):</strong> Engage your leads with a longer, persuasive video that masterfully convinces them to make the desired purchase.
+            </li>
+            
+            <li className="mb-3">
+              <strong>Checkout Experience:</strong> Enjoy a sophisticated and secure checkout process that may include enticing upsells, downfalls, and order bumps to maximize your sales potential.
+            </li>
+            
+            <li className="mb-3">
+              <strong>Support & Post-Sales Assistance:</strong> We go the extra mile by setting up your domain, email, and connecting your social media platforms to your page for a holistic online presence.
+            </li>
+          </ol>
+          
+          <div className="text-center mt-4">
+            <p className="fw-bold">Ready to elevate your brand? Click the button and connect with us now!</p>
+            <Button 
+              variant="primary" 
+              href="#contact"
+              onClick={() => setShowLearnMore(false)}
+            >
+              Get Started
+            </Button>
+          </div>
+        </Modal.Body>
+      </Modal>
 
       {/* Portfolio/Testimonials */}
       <section className="py-5" id="portfolio">
@@ -127,19 +183,28 @@ function Home() {
           </p>
           <Row className="justify-content-center">
             <Col md={8}>
+              {/* First Video - YouTube Embed */}
               <div className="video-container mb-4">
                 <div className="ratio ratio-16x9">
-                  <div className="bg-secondary d-flex align-items-center justify-content-center">
-                    <i className="bi bi-play-circle fs-1"></i>
-                  </div>
+                  <iframe 
+                    src="https://www.youtube.com/embed/qddv8G4rvpc?si=sizwome_mums56pw" 
+                    title="Video Ad1 for Facebook Ads"
+                    allowFullScreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe>
                 </div>
                 <p className="text-center mt-2">Client Success Story</p>
               </div>
+              
+              {/* Second Video - YouTube Embed */}
               <div className="video-container mb-4">
                 <div className="ratio ratio-16x9">
-                  <div className="bg-secondary d-flex align-items-center justify-content-center">
-                    <i className="bi bi-play-circle fs-1"></i>
-                  </div>
+                  <iframe 
+                    src="https://www.youtube.com/embed/5jZxh8OxePI?si=0CQBAx0GDcexS5xf" 
+                    title="Video Ad2 for Facebook Ads"
+                    allowFullScreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe>
                 </div>
                 <p className="text-center mt-2">How We Work</p>
               </div>
@@ -148,11 +213,11 @@ function Home() {
         </Container>
       </section>
 
-      {/* Pricing Section */}
+     {/* Pricing Section */} 
       <section className="py-5 bg-light" id="pricing">
         <Container>
           <h2 className="text-center mb-2">Prices</h2>
-          <p className="text-center mb-5">We charge by the project</p>
+          <p className="text-center mb-5">We make it happen!</p>
           <div className="table-responsive">
             <table className="table table-bordered">
               <thead>
@@ -160,33 +225,63 @@ function Home() {
                   <th>Service</th>
                   <th>STANDARD</th>
                   <th>PRO</th>
-                  <th>ENTERPRISE</th>
+                  <th>ULTIMATE</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Sales Page</td>
-                  <td>$1,000+</td>
-                  <td>$2,000+</td>
-                  <td>Custom Price</td>
+                  <td>Creative</td>
+                  <td>1 (up to 30s)</td>
+                  <td>3 (up to 60s)</td>
+                  <td>3 (up to 120s)</td>
                 </tr>
                 <tr>
-                  <td>Email Sequence</td>
-                  <td>$800+</td>
-                  <td>$1,500+</td>
-                  <td>Custom Price</td>
+                  <td>Landing Page</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
                 </tr>
                 <tr>
-                  <td>Website Content</td>
-                  <td>$500+</td>
-                  <td>$1,200+</td>
-                  <td>Custom Price</td>
+                  <td>VSL</td>
+                  <td>1 (you do the Copy)</td>
+                  <td>1 (up to 10 min.)</td>
+                  <td>1 (up to 20 min.)</td>
                 </tr>
                 <tr>
-                  <td>Social Media Kit</td>
-                  <td>$400+</td>
-                  <td>$800+</td>
-                  <td>Custom Price</td>
+                  <td>Domain & Email set up</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Checkout</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Upsell, Downsell, OrderBump</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Sales Platform</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Facebook & Google Ads</td>
+                  <td>Let's talk!</td>
+                  <td>Let's talk!</td>
+                  <td>Let's talk!</td>
+                </tr>
+                <tr>
+                  <td>Your Investment</td>
+                  <td>Let's talk!</td>
+                  <td>Let's talk!</td>
+                  <td>Let's talk!</td>
                 </tr>
               </tbody>
             </table>
@@ -201,7 +296,14 @@ function Home() {
           <p className="mb-4">
             After 10 years of scaling successful copywriting campaigns, we've learned that clarity, strategy, and perfect words drive exceptional results. Let's talk about how we can help your business.
           </p>
-          <Button variant="primary" size="lg" className="px-4 py-2">Talk to an Expert</Button>
+          <Button 
+            variant="primary" 
+            size="lg" 
+            className="px-4 py-2" 
+            href="mailto:hi@ismaelsilva.com"
+          >
+            Talk to the Expert
+          </Button>
         </Container>
       </section>
 

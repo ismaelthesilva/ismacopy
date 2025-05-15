@@ -28,25 +28,101 @@
 
 /* Button Styling - Inspired by BJJ Belts */
 .btn-primary {
-  background-color: #003087; /* Blue belt color */
-  border-color: #003087;
+  background-color: #28a745 !important; /* Bootstrap green */
+  border-color: #28a745 !important;
   transition: all 0.3s ease;
+  animation: pulse-green 1.5s infinite;
 }
 
-.btn-primary:hover {
-  background-color: #4b0082; /* Purple belt color */
-  border-color: #4b0082;
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #218838 !important; /* Darker green on hover */
+  border-color: #218838 !important;
+  color: #fff !important;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
 }
 
 .btn-outline-light {
-  border-color: #f8f9fa !important;
-  background-color: #ffffff !important; /* White background for visibility */
-  color: #000000 !important; /* Black text for toggle buttons */
+  border-color: #28a745 !important;
+  color: #28a745 !important;
+  background-color: #fff !important;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-light:hover {
-  background-color: #f8f9fa !important;
-  color: #1a1a1a !important;
+.btn-outline-light:hover, .btn-outline-light:focus {
+  background-color: #28a745 !important;
+  color: #fff !important;
+  border-color: #218838 !important;
+}
+
+/* Update all button variants to match the green theme */
+
+/* Style all button variants consistently */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  animation: pulse-green 1.5s infinite;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #218838 !important;
+  border-color: #218838 !important;
+}
+
+/* Success buttons */
+.btn-success {
+  animation: pulse-green 1.5s infinite;
+}
+
+/* Add animation to outline variants */
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success {
+  border-color: #28a745 !important;
+  color: #28a745 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover, .btn-outline-secondary:hover, .btn-outline-success:hover,
+.btn-outline-primary:focus, .btn-outline-secondary:focus, .btn-outline-success:focus {
+  background-color: #28a745 !important;
+  color: #fff !important;
+  border-color: #218838 !important;
+}
+
+/* Modal button styling */
+.modal-body .btn {
+  animation: pulse-green 1.5s infinite;
+}
+
+/* Make sure link colors match the theme */
+a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #218838;
+  text-decoration: underline;
+}
+
+/* Adding focus styles for accessibility */
+.btn:focus, .btn:active:focus {
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5) !important;
+  outline: 0;
 }
 
 /* Typography */
@@ -121,10 +197,48 @@ table th, table td {
 
 .video-container {
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-container:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.ratio iframe,
+.ratio video {
+  border-radius: 8px;
+}
+
+/* Learn More Modal Styles */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.service-list {
+  padding-left: 1.25rem;
+}
+
+.service-list li {
+  position: relative;
+}
+
+/* Make strong text in service list green instead of blue */
+.service-list li strong {
+  color: #28a745 !important;
 }
 
