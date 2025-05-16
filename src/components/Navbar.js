@@ -12,7 +12,7 @@ const NavbarComponent = () => {
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="navbar-custom">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold text-uppercase">
-          <span className="belt-white">Isma</span> <span className="belt-blue">Copy</span>
+          <span className="belt-white">isma</span><span className="belt-blue">COPY</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -179,7 +179,7 @@ function Home() {
         <Container>
           <h2 className="text-center mb-3">Check us out</h2>
           <p className="text-center mb-5">
-            Testimonials and success stories show our consistent growth, engagement, and results across multiple marketing channels.
+            Persuasive sales copies, landing pages, and VSLs that convert!
           </p>
           <Row className="justify-content-center">
             <Col md={8}>
@@ -193,7 +193,7 @@ function Home() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
                 </div>
-                <p className="text-center mt-2">Client Success Story</p>
+                <p className="text-center mt-2">Facebook Ad1</p>
               </div>
               
               {/* Second Video - YouTube Embed */}
@@ -206,7 +206,7 @@ function Home() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
                 </div>
-                <p className="text-center mt-2">How We Work</p>
+                <p className="text-center mt-2">Facebook Ad2</p>
               </div>
             </Col>
           </Row>
