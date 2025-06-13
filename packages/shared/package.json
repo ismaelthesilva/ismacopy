@@ -1,0 +1,11 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Shared package - no dev server needed'",
+    "build": "echo 'Building shared package'",
+    "lint": "echo 'Linting shared package'",
+    "type-check": "echo 'Type checking shared package'"
+  }
+}

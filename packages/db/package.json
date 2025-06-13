@@ -1,0 +1,11 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'DB package - no dev server needed'",
+    "build": "echo 'Building DB package'",
+    "lint": "echo 'Linting DB package'",
+    "type-check": "echo 'Type checking DB package'"
+  }
+}

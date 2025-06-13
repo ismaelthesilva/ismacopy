@@ -1,0 +1,11 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Admin app dev server would start here'",
+    "build": "echo 'Building admin app'",
+    "lint": "echo 'Linting admin app'",
+    "type-check": "echo 'Type checking admin app'"
+  }
+}

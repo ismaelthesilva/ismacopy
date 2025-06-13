@@ -1,0 +1,11 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'UI package - no dev server needed'",
+    "build": "echo 'Building UI package'",
+    "lint": "echo 'Linting UI package'",
+    "type-check": "echo 'Type checking UI package'"
+  }
+}
