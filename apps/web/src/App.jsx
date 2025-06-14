@@ -1,5 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import './i18n/i18n';
+import './index.css';
+
+// 1) Pages with Navbar
 import Home from './pages/Home';
+import Navbar from './components/Navbar';
+
+// 2) Pages without Navbar
 import PageOne from './pages/landingPages/pageOne/PageOne';
 import IndexPage from './pages/landingPages/htmlText/index';
 import BJJ40USA from "./pages/landingPages/bjjusa/bjj40usa";
@@ -12,29 +20,41 @@ import ObrigadoUpsell from './pages/landingPages/bjjbr/ObrigadoUpsell';
 import Pagamento from './pages/landingPages/br/aguardando-pagamento';
 import Processada from './pages/landingPages/br/compra-esta-sendo-processada';
 import Concluida from './pages/landingPages/br/compra-concluida';
-import './i18n/i18n';
-import { Toaster } from 'react-hot-toast';
-import './index.css';
-import Navbar from './components/Navbar';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
+// 3) Pages using shadcn UI
+import Dashboard from './pages/Dashboard';
+
+// Layouts
+const NavbarLayout = () => (
+  <>
+    <Navbar />
+    <main className="container mx-auto py-4">
+      <Outlet />
+    </main>
+  </>
+);
+
+const ShadcnLayout = () => (
+  <div className="min-h-screen bg-background">
+    <Outlet />
+  </div>
+);
 
 function App() {
   return (
-    
     <>
       <Toaster position="top-right" />
-      <Router>
-        {/* Show navbar only on home page */}
+      <BrowserRouter>
         <Routes>
-          {/* Home page with Navbar */}
-          <Route path="/" element={
-            <>
-              <Navbar />
-              <Home />
-            </>
-          } />
+          {/* 1. Pages with Navbar */}
+          <Route element={<NavbarLayout />}>
+            <Route path="/" element={<Home />} />
+            {/* Add more pages with navbar here if needed */}
+          </Route>
 
-          {/* Pages without Navbar */}
+          {/* 2. Pages without Navbar */}
           <Route path="/PageOne" element={<PageOne />} />
           <Route path="/index" element={<IndexPage />} />
           <Route path="/BJJ40USA" element={<BJJ40USA />} />
@@ -47,8 +67,16 @@ function App() {
           <Route path="/aguardando-pagamento" element={<Pagamento />} />
           <Route path="/compra-esta-sendo-processada" element={<Processada />} />
           <Route path="/compra-concluida" element={<Concluida />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* 3. App Pages with shadcn/UI components */}
+          <Route path="/dashboard/*" element={<ShadcnLayout />}>
+            <Route index element={<Dashboard />} />
+            {/* Add more shadcn/UI app pages as nested routes here if needed */}
+          </Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
