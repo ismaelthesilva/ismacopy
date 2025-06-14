@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato",
+    "dashboard": "Painel"
+  },
+  "hero": {
+    "badge": "🔥 Convertendo 3x Melhor que a Média do Mercado",
+    "title": "Transforme Seu Tráfego em",
+    "titleHighlight": "Clientes Pagantes",
+    "description": "Soluções completas de marketing digital que convertem visitantes em compradores. De copywriting a landing pages, criação de vídeos a campanhas de anúncios -",
+    "descriptionHighlight": "tudo em um só lugar.",
+    "ctaPrimary": "Agende Sua Consultoria Gratuita",
+    "ctaSecondary": "Assista Casos de Sucesso",
+    "socialProof": {
+      "clients": "Clientes Satisfeitos",
+      "revenue": "Faturado",
+      "roi": "ROI Médio"
+    }
+  },
+  "clients": {
+    "title": "Confiado por Empresas Líderes"
+  },
+  "services": {
+    "badge": "Solução Completa",
+    "title": "Tudo o Que Você Precisa Para",
+    "titleHighlight": "Escalar Seu Negócio",
+    "description": "Pare de fazer malabarismos com várias agências. Tenha copywriting, desenvolvimento web, criação de vídeos e gestão de anúncios de uma equipe especializada.",
+    "copywriting": {
+      "title": "Copywriting Que Converte",
+      "description": "Gatilhos psicológicos e textos persuasivos que transformam visitantes em compradores",
+      "features": ["Cartas de vendas", "Sequências de email", "Copy para anúncios", "Scripts de VSL"]
+    },
+    "landingPages": {
+      "title": "Landing Pages & Funis",
+      "description": "Landing pages de alta conversão otimizadas para Facebook Ads e Google Ads",
+      "features": ["Otimizado mobile", "Testado A/B", "Carregamento rápido", "Analytics integrado"]
+    },
+    "videoCreation": {
+      "title": "Criação de Vídeo & Imagem",
+      "description": "Vídeos de vendas profissionais e visuais impressionantes que vendem",
+      "features": ["Produção de VSL", "Edição de imagem", "Conteúdo para redes", "Criativos para anúncios"]
+    },
+    "digitalMarketing": {
+      "title": "Marketing Digital Completo",
+      "description": "Campanhas completas da criação de anúncios à integração com Hotmart",
+      "features": ["Setup de campanhas", "Segmentação de público", "Tracking de conversão", "Otimização de ROI"]
+    }
+  },
+  "technologies": {
+    "badge": "Tecnologia de Ponta",
+    "title": "Construído Com as",
+    "titleHighlight": "Mais Recentes Tecnologias",
+    "description": "Usamos as ferramentas mais avançadas para garantir que suas campanhas tenham o máximo desempenho",
+    "items": {
+      "react": "Desenvolvimento web ultrarrápido",
+      "tailwind": "Designs bonitos e responsivos",
+      "shadcn": "Biblioteca de componentes moderna",
+      "facebook": "Campanhas publicitárias direcionadas",
+      "google": "Publicidade de busca e display",
+      "hotmart": "Funis de vendas para produtos digitais",
+      "video": "Conteúdo de vídeo profissional",
+      "landing": "Páginas de vendas de alta conversão"
+    }
+  },
+  "testimonials": {
+    "badge": "Resultados Reais",
+    "title": "O Que Nossos Clientes Dizem Sobre",
+    "titleHighlight": "Trabalhar Conosco",
+    "items": [
+      {
+        "name": "Maria Santos",
+        "company": "Fitness Digital",
+        "text": "Ismael aumentou nossa taxa de conversão em 340% em apenas 30 dias. Suas landing pages são puro ouro!",
+        "result": "+340% conversões"
+      },
+      {
+        "name": "Carlos Rodriguez",
+        "company": "Tech Startup",
+        "text": "O VSL que o Ismael criou para nós gerou mais de R$150k no primeiro mês. ROI incrível!",
+        "result": "R$150k em 30 dias"
+      },
+      {
+        "name": "Ana Costa",
+        "company": "Criadora de Curso Online",
+        "text": "Suas habilidades de copywriting são incomparáveis. Cada sequência de email que ele escreve gera vendas.",
+        "result": "+250% receita email"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "🚨 Oferta Por Tempo Limitado",
+    "title": "Pronto Para",
+    "titleHighlight": "10x Suas Conversões?",
+    "description": "Agende sua consultoria gratuita agora e descubra como podemos transformar seu tráfego em uma máquina geradora de lucros. Sem enrolação, apenas estratégias comprovadas que funcionam.",
+    "button": "Agende Sua Consultoria GRATUITA",
+    "urgency": "⏰ Apenas 5 vagas disponíveis esta semana",
+    "guarantees": ["100% Consultoria Gratuita", "Plano de Estratégia Personalizado", "Sem Compromisso"]
+  },
+  "footer": {
+    "title": "Ismael Silva - Especialista em Marketing Digital",
+    "description": "Transformando negócios através de copy de alta conversão e tecnologia de ponta",
+    "links": {
+      "contact": "Entre em Contato",
+      "about": "Saiba Mais Sobre Nós",
+      "dashboard": "Portal do Cliente"
+    }
+  }
+}

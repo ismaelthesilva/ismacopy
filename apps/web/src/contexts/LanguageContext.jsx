@@ -1,5 +1,7 @@
 // apps/web/src/contexts/LanguageContext.jsx
 import React, { createContext, useContext, useState } from 'react';
+import enTranslations from '../locales/en.json';
+import ptTranslations from '../locales/pt.json';
 
 const LanguageContext = createContext();
 
@@ -12,33 +14,8 @@ export const useLanguage = () => {
 };
 
 const translations = {
-  en: {
-    home: 'Home',
-    about: 'About',
-    services: 'Services',
-    contact: 'Contact',
-    dashboard: 'Dashboard',
-    language: 'Language',
-    theme: 'Theme'
-  },
-  pt: {
-    home: 'Início',
-    about: 'Sobre',
-    services: 'Serviços',
-    contact: 'Contato',
-    dashboard: 'Painel',
-    language: 'Idioma',
-    theme: 'Tema'
-  },
-  es: {
-    home: 'Inicio',
-    about: 'Acerca',
-    services: 'Servicios',
-    contact: 'Contacto',
-    dashboard: 'Panel',
-    language: 'Idioma',
-    theme: 'Tema'
-  }
+  en: enTranslations,
+  pt: ptTranslations
 };
 
 export const LanguageProvider = ({ children }) => {
@@ -51,8 +28,20 @@ export const LanguageProvider = ({ children }) => {
     localStorage.setItem('language', lang);
   };
 
+  // Enhanced translation function with nested key support
   const t = (key) => {
-    return translations[language][key] || key;
+    const keys = key.split('.');
+    let value = translations[language];
+    
+    for (const k of keys) {
+      if (value && typeof value === 'object') {
+        value = value[k];
+      } else {
+        return key; // Return key if translation not found
+      }
+    }
+    
+    return value || key;
   };
 
   return (

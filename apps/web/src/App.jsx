@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Toaster } from 'react-hot-toast';
-import './i18n/i18n';
 import './index.css';
 
 // 1) Pages with Navbar

@@ -27,17 +27,16 @@ const Navbar = () => {
   const location = useLocation();
 
   const navigationLinks = [
-    { name: t('home'), href: '/', icon: null },
-    { name: t('about'), href: '/about', icon: null },
-    { name: t('services'), href: '/services', icon: null },
-    { name: t('contact'), href: '/contact', icon: null },
-    { name: t('dashboard'), href: '/app/dashboard', icon: null }
+    { name: t('nav.home'), href: '/', icon: null },
+    { name: t('nav.about'), href: '/about', icon: null },
+    { name: t('nav.services'), href: '/services', icon: null },
+    { name: t('nav.contact'), href: '/contact', icon: null },
+    { name: t('nav.dashboard'), href: '/app/dashboard', icon: null }
   ];
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'pt', name: 'Português', flag: '🇧🇷' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' }
+    { code: 'pt', name: 'Português', flag: '🇧🇷' }
   ];
 
   const isActivePath = (path) => {

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@ismacopy/ui/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@ismacopy/ui/components/ui/card';
 import { Badge } from '@ismacopy/ui/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@ismacopy/ui/components/ui/avatar';
+import { useLanguage } from '../contexts/LanguageContext';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -19,73 +20,48 @@ import {
   Globe
 } from 'lucide-react';
 
-function Home() {
-  const [showLearnMore, setShowLearnMore] = useState(false);
+export default function Home() {
+  const { t } = useLanguage();
 
   const technologies = [
-    { name: 'React & Vite', icon: '⚛️', description: 'Lightning-fast web development' },
-    { name: 'Tailwind CSS', icon: '🎨', description: 'Beautiful, responsive designs' },
-    { name: 'shadcn/ui', icon: '🚀', description: 'Modern component library' },
-    { name: 'Facebook Ads', icon: '📘', description: 'Targeted advertising campaigns' },
-    { name: 'Google Ads', icon: '🔍', description: 'Search & display advertising' },
-    { name: 'Hotmart Integration', icon: '💰', description: 'Digital product sales funnels' },
-    { name: 'Video Editing', icon: '🎬', description: 'Professional video content' },
-    { name: 'Landing Pages', icon: '📄', description: 'High-converting sales pages' }
+    { name: 'React & Vite', icon: '⚛️', description: t('technologies.items.react') },
+    { name: 'Tailwind CSS', icon: '🎨', description: t('technologies.items.tailwind') },
+    { name: 'shadcn/ui', icon: '🚀', description: t('technologies.items.shadcn') },
+    { name: 'Facebook Ads', icon: '📘', description: t('technologies.items.facebook') },
+    { name: 'Google Ads', icon: '🔍', description: t('technologies.items.google') },
+    { name: 'Hotmart Integration', icon: '💰', description: t('technologies.items.hotmart') },
+    { name: 'Video Editing', icon: '🎬', description: t('technologies.items.video') },
+    { name: 'Landing Pages', icon: '📄', description: t('technologies.items.landing') }
   ];
 
   const services = [
     {
-      title: 'Copywriting That Converts',
-      description: 'Psychological triggers and persuasive copy that turns visitors into buyers',
+      title: t('services.copywriting.title'),
+      description: t('services.copywriting.description'),
       icon: <FileText className="h-8 w-8" />,
-      features: ['Sales letters', 'Email sequences', 'Ad copy', 'VSL scripts']
+      features: t('services.copywriting.features')
     },
     {
-      title: 'Landing Pages & Funnels',
-      description: 'High-converting landing pages optimized for Facebook and Google Ads',
+      title: t('services.landingPages.title'),
+      description: t('services.landingPages.description'),
       icon: <Target className="h-8 w-8" />,
-      features: ['Mobile-optimized', 'A/B tested', 'Fast loading', 'Analytics integrated']
+      features: t('services.landingPages.features')
     },
     {
-      title: 'Video & Image Creation',
-      description: 'Professional video sales letters and stunning visuals that sell',
+      title: t('services.videoCreation.title'),
+      description: t('services.videoCreation.description'),
       icon: <Video className="h-8 w-8" />,
-      features: ['VSL production', 'Image editing', 'Social media content', 'Ad creatives']
+      features: t('services.videoCreation.features')
     },
     {
-      title: 'Complete Digital Marketing',
-      description: 'End-to-end campaigns from ad creation to Hotmart integration',
+      title: t('services.digitalMarketing.title'),
+      description: t('services.digitalMarketing.description'),
       icon: <TrendingUp className="h-8 w-8" />,
-      features: ['Campaign setup', 'Audience targeting', 'Conversion tracking', 'ROI optimization']
+      features: t('services.digitalMarketing.features')
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Maria Santos',
-      company: 'Fitness Digital',
-      image: '/api/placeholder/64/64',
-      rating: 5,
-      text: 'Ismael increased our conversion rate by 340% in just 30 days. His landing pages are pure gold!',
-      result: '+340% conversions'
-    },
-    {
-      name: 'Carlos Rodriguez',
-      company: 'Tech Startup',
-      image: '/api/placeholder/64/64',
-      rating: 5,
-      text: 'The VSL Ismael created for us generated over R$150k in the first month. Incredible ROI!',
-      result: 'R$150k in 30 days'
-    },
-    {
-      name: 'Ana Costa',
-      company: 'Online Course Creator',
-      image: '/api/placeholder/64/64',
-      rating: 5,
-      text: 'His copywriting skills are unmatched. Every email sequence he writes brings in sales.',
-      result: '+250% email revenue'
-    }
-  ];
+  const testimonials = t('testimonials.items');
 
   const clients = [
     { name: 'TechCorp', logo: '🏢' },
@@ -97,53 +73,55 @@ function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-white dark:bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-950 dark:via-purple-950 dark:to-slate-950">
-        <div className="absolute inset-0 bg-black/20"></div>
+      {/* Hero Section - Keep same purple gradient for both modes */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Animated background pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+        
         <div className="relative container mx-auto px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-4 bg-yellow-500 text-black font-semibold">
-              🔥 Converting 3x Better Than Industry Average
+            <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold animate-pulse">
+              {t('hero.badge')}
             </Badge>
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 leading-tight">
-              Turn Your Traffic Into 
-              <span className="text-yellow-400"> Paying Customers</span>
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              {t('hero.title')} 
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> {t('hero.titleHighlight')}</span>
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed">
-              Complete digital marketing solutions that convert visitors into buyers. 
-              From copywriting to landing pages, video creation to ad campaigns - 
-              <strong className="text-yellow-400"> all in one place.</strong>
+            <p className="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed text-gray-300">
+              {t('hero.description')} 
+              <strong className="text-yellow-400"> {t('hero.descriptionHighlight')}</strong>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4">
-                Get Your Free Strategy Call
+              <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
+                {t('hero.ctaPrimary')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-foreground/30 text-foreground hover:bg-foreground/10 backdrop-blur-sm"
-              >
+              <Button size="lg" variant="outline" className="border-foreground/30 text-foreground hover:bg-foreground/10 backdrop-blur-sm">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Success Stories
+                {t('hero.ctaSecondary')}
               </Button>
             </div>
 
             {/* Social Proof */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm opacity-90">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-300">
               <div className="flex items-center gap-2">
-                <Users className="h-5 w-5" />
-                <span>500+ Happy Clients</span>
+                <Users className="h-5 w-5 text-blue-400" />
+                <span>500+ {t('hero.socialProof.clients')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrendingUp className="h-5 w-5" />
-                <span>R$5M+ Generated</span>
+                <TrendingUp className="h-5 w-5 text-green-400" />
+                <span>R$5M+ {t('hero.socialProof.revenue')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="h-5 w-5" />
-                <span>Average 3.4x ROI</span>
+                <Zap className="h-5 w-5 text-yellow-400" />
+                <span>3.4x {t('hero.socialProof.roi')}</span>
               </div>
             </div>
           </div>
@@ -151,14 +129,14 @@ function Home() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
         <div className="container mx-auto px-4">
-          <p className="text-center text-gray-600 mb-8 font-medium">
-            Trusted by Leading Companies
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-8 font-medium">
+            {t('clients.title')}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8">
             {clients.map((client, index) => (
-              <div key={index} className="flex items-center gap-2 text-2xl font-bold text-gray-800">
+              <div key={index} className="flex items-center gap-2 text-2xl font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
                 <span className="text-3xl">{client.logo}</span>
                 <span>{client.name}</span>
               </div>
@@ -168,34 +146,33 @@ function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">
-              Complete Solution
+            <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              {t('services.badge')}
             </Badge>
-            <h2 className="text-4xl font-bold mb-6">
-              Everything You Need to <span className="text-blue-600">Scale Your Business</span>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              {t('services.title')} <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{t('services.titleHighlight')}</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stop juggling multiple agencies. Get copywriting, web development, 
-              video creation, and ad management from one expert team.
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              {t('services.description')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+              <Card key={index} className="bg-white dark:bg-slate-800/50 backdrop-blur-sm border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl dark:hover:shadow-2xl hover:shadow-blue-100 dark:hover:shadow-blue-500/10">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg text-blue-600">
+                    <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg text-white">
                       {service.icon}
                     </div>
                     <div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
+                      <CardTitle className="text-xl text-gray-900 dark:text-white">{service.title}</CardTitle>
                     </div>
                   </div>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
@@ -203,8 +180,8 @@ function Home() {
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span className="text-sm">{feature}</span>
+                        <CheckCircle className="h-4 w-4 text-green-500 dark:text-green-400" />
+                        <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -216,29 +193,29 @@ function Home() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50 dark:bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-purple-100 text-purple-800">
-              Cutting-Edge Tech
+            <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white">
+              {t('technologies.badge')}
             </Badge>
-            <h2 className="text-4xl font-bold mb-6">
-              Built With The <span className="text-purple-600">Latest Technologies</span>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              {t('technologies.title')} <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">{t('technologies.titleHighlight')}</span>
             </h2>
-            <p className="text-xl text-gray-600">
-              We use the most advanced tools to ensure your campaigns perform at their peak
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              {t('technologies.description')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {technologies.map((tech, index) => (
-              <Card key={index} className="text-center hover:shadow-md transition-all duration-300">
+              <Card key={index} className="text-center bg-white dark:bg-slate-700/50 backdrop-blur-sm border-gray-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-100 dark:hover:shadow-purple-500/10">
                 <CardHeader className="pb-2">
                   <div className="text-4xl mb-2">{tech.icon}</div>
-                  <CardTitle className="text-lg">{tech.name}</CardTitle>
+                  <CardTitle className="text-lg text-gray-900 dark:text-white">{tech.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-sm">
+                  <CardDescription className="text-sm text-gray-500 dark:text-gray-400">
                     {tech.description}
                   </CardDescription>
                 </CardContent>
@@ -249,40 +226,42 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-blue-100 via-purple-50 to-blue-100 dark:from-blue-900 dark:via-purple-900 dark:to-blue-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-yellow-500 text-black">
-              Real Results
+            <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black">
+              {t('testimonials.badge')}
             </Badge>
-            <h2 className="text-4xl font-bold mb-6 text-white">
-              What Our Clients Say About <span className="text-yellow-400">Working With Us</span>
+            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              {t('testimonials.title')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('testimonials.titleHighlight')}</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+              <Card key={index} className="bg-white/80 dark:bg-white/10 backdrop-blur-md border-gray-200/50 dark:border-white/20 text-gray-900 dark:text-white hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
-                    <Avatar>
-                      <AvatarImage src={testimonial.image} />
-                      <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    <Avatar className="border-2 border-gray-200 dark:border-white/20">
+                      <AvatarImage src={`/api/placeholder/64/64`} />
+                      <AvatarFallback className="bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
                     </Avatar>
                     <div>
-                      <CardTitle className="text-white">{testimonial.name}</CardTitle>
-                      <CardDescription className="text-blue-200">{testimonial.company}</CardDescription>
+                      <CardTitle className="text-gray-900 dark:text-white">{testimonial.name}</CardTitle>
+                      <CardDescription className="text-blue-600 dark:text-blue-200">{testimonial.company}</CardDescription>
                     </div>
                   </div>
                   <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-white/90 mb-4 italic">"{testimonial.text}"</p>
-                  <Badge className="bg-green-500 text-white">
+                  <p className="text-gray-800 dark:text-white/90 mb-4 italic">"{testimonial.text}"</p>
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white">
                     {testimonial.result}
                   </Badge>
                 </CardContent>
@@ -293,62 +272,63 @@ function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-red-600 text-white animate-pulse">
-            🚨 Limited Time Offer
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-black dark:to-gray-900 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-bounce"></div>
+        </div>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-600 text-white animate-pulse">
+            {t('cta.badge')}
           </Badge>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Ready to <span className="text-yellow-400">10x Your Conversions?</span>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            {t('cta.title')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('cta.titleHighlight')}</span>
           </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Book your free strategy call now and discover how we can transform your traffic 
-            into a profit-generating machine. No fluff, just proven strategies that work.
+          <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-600 dark:text-gray-300">
+            {t('cta.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4">
-              Book Your FREE Strategy Call
+            <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-700 hover:from-red-700 hover:to-orange-800 text-white font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-red-500/25 transition-all duration-300">
+              {t('cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <div className="text-sm text-gray-400">
-              ⏰ Only 5 spots available this week
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              {t('cta.urgency')}
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>100% Free Consultation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>Custom Strategy Plan</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>No Obligation</span>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-600 dark:text-gray-300">
+            {t('cta.guarantees').map((guarantee, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-500 dark:text-green-400" />
+                <span>{guarantee}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-12 bg-gray-900 text-white">
+      {/* Footer */}
+      <section className="py-12 bg-gray-900 dark:bg-black text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">Ismael Silva - Digital Marketing Expert</h3>
+          <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            {t('footer.title')}
+          </h3>
           <p className="text-gray-400 mb-6">
-            Transforming businesses through high-converting copy and cutting-edge technology
+            {t('footer.description')}
           </p>
           <div className="flex justify-center gap-6">
-            <Link to="/contact" className="text-blue-400 hover:text-blue-300">
-              Get In Touch
+            <Link to="/contact" className="text-blue-400 hover:text-blue-300 transition-colors">
+              {t('footer.links.contact')}
             </Link>
-            <Link to="/about" className="text-blue-400 hover:text-blue-300">
-              Learn More About Us
+            <Link to="/about" className="text-blue-400 hover:text-blue-300 transition-colors">
+              {t('footer.links.about')}
             </Link>
-            <Link to="/app/dashboard" className="text-blue-400 hover:text-blue-300">
-              Client Portal
+            <Link to="/app/dashboard" className="text-blue-400 hover:text-blue-300 transition-colors">
+              {t('footer.links.dashboard')}
             </Link>
           </div>
         </div>
@@ -356,5 +336,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

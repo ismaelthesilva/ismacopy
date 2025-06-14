@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "badge": "🔥 Converting 3x Better Than Industry Average",
+    "title": "Turn Your Traffic Into",
+    "titleHighlight": "Paying Customers",
+    "description": "Complete digital marketing solutions that convert visitors into buyers. From copywriting to landing pages, video creation to ad campaigns -",
+    "descriptionHighlight": "all in one place.",
+    "ctaPrimary": "Get Your Free Strategy Call",
+    "ctaSecondary": "Watch Success Stories",
+    "socialProof": {
+      "clients": "Happy Clients",
+      "revenue": "Generated",
+      "roi": "Average ROI"
+    }
+  },
+  "clients": {
+    "title": "Trusted by Leading Companies"
+  },
+  "services": {
+    "badge": "Complete Solution",
+    "title": "Everything You Need to",
+    "titleHighlight": "Scale Your Business",
+    "description": "Stop juggling multiple agencies. Get copywriting, web development, video creation, and ad management from one expert team.",
+    "copywriting": {
+      "title": "Copywriting That Converts",
+      "description": "Psychological triggers and persuasive copy that turns visitors into buyers",
+      "features": ["Sales letters", "Email sequences", "Ad copy", "VSL scripts"]
+    },
+    "landingPages": {
+      "title": "Landing Pages & Funnels",
+      "description": "High-converting landing pages optimized for Facebook and Google Ads",
+      "features": ["Mobile-optimized", "A/B tested", "Fast loading", "Analytics integrated"]
+    },
+    "videoCreation": {
+      "title": "Video & Image Creation",
+      "description": "Professional video sales letters and stunning visuals that sell",
+      "features": ["VSL production", "Image editing", "Social media content", "Ad creatives"]
+    },
+    "digitalMarketing": {
+      "title": "Complete Digital Marketing",
+      "description": "End-to-end campaigns from ad creation to Hotmart integration",
+      "features": ["Campaign setup", "Audience targeting", "Conversion tracking", "ROI optimization"]
+    }
+  },
+  "technologies": {
+    "badge": "Cutting-Edge Tech",
+    "title": "Built With The",
+    "titleHighlight": "Latest Technologies",
+    "description": "We use the most advanced tools to ensure your campaigns perform at their peak",
+    "items": {
+      "react": "Lightning-fast web development",
+      "tailwind": "Beautiful, responsive designs",
+      "shadcn": "Modern component library",
+      "facebook": "Targeted advertising campaigns",
+      "google": "Search & display advertising",
+      "hotmart": "Digital product sales funnels",
+      "video": "Professional video content",
+      "landing": "High-converting sales pages"
+    }
+  },
+  "testimonials": {
+    "badge": "Real Results",
+    "title": "What Our Clients Say About",
+    "titleHighlight": "Working With Us",
+    "items": [
+      {
+        "name": "Maria Santos",
+        "company": "Fitness Digital",
+        "text": "Ismael increased our conversion rate by 340% in just 30 days. His landing pages are pure gold!",
+        "result": "+340% conversions"
+      },
+      {
+        "name": "Carlos Rodriguez",
+        "company": "Tech Startup",
+        "text": "The VSL Ismael created for us generated over R$150k in the first month. Incredible ROI!",
+        "result": "R$150k in 30 days"
+      },
+      {
+        "name": "Ana Costa",
+        "company": "Online Course Creator",
+        "text": "His copywriting skills are unmatched. Every email sequence he writes brings in sales.",
+        "result": "+250% email revenue"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "🚨 Limited Time Offer",
+    "title": "Ready to",
+    "titleHighlight": "10x Your Conversions?",
+    "description": "Book your free strategy call now and discover how we can transform your traffic into a profit-generating machine. No fluff, just proven strategies that work.",
+    "button": "Book Your FREE Strategy Call",
+    "urgency": "⏰ Only 5 spots available this week",
+    "guarantees": ["100% Free Consultation", "Custom Strategy Plan", "No Obligation"]
+  },
+  "footer": {
+    "title": "Ismael Silva - Digital Marketing Expert",
+    "description": "Transforming businesses through high-converting copy and cutting-edge technology",
+    "links": {
+      "contact": "Get In Touch",
+      "about": "Learn More About Us",
+      "dashboard": "Client Portal"
+    }
+  }
+}
