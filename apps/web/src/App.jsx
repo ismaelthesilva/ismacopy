@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 import { Toaster } from 'react-hot-toast';
 import './i18n/i18n';
 import './index.css';
@@ -30,7 +32,7 @@ import Dashboard from './pages/Dashboard';
 const NavbarLayout = () => (
   <>
     <Navbar />
-    <main className="container mx-auto py-4">
+    <main className="min-h-screen">
       <Outlet />
     </main>
   </>
@@ -44,40 +46,42 @@ const ShadcnLayout = () => (
 
 function App() {
   return (
-    <>
-      <Toaster position="top-right" />
-      <BrowserRouter>
-        <Routes>
-          {/* 1. Pages with Navbar */}
-          <Route element={<NavbarLayout />}>
-            <Route path="/" element={<Home />} />
-            {/* Add more pages with navbar here if needed */}
-          </Route>
+    <ThemeProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Toaster position="top-right" />
+          <Routes>
+            {/* 1. Pages with Navbar */}
+            <Route element={<NavbarLayout />}>
+              <Route path="/" element={<Home />} />
+              {/* Add more pages with navbar here if needed */}
+            </Route>
 
-          {/* 2. Pages without Navbar */}
-          <Route path="/PageOne" element={<PageOne />} />
-          <Route path="/index" element={<IndexPage />} />
-          <Route path="/BJJ40USA" element={<BJJ40USA />} />
-          <Route path="/Performance2" element={<Performance2 />} />
-          <Route path="/BJJ40BR" element={<BJJ40BR />} />
-          <Route path="/BJJMentoria" element={<BJJMentoria />} />
-          <Route path="/Obrigado" element={<Obrigado />} />
-          <Route path="/ObrigadoUpsell" element={<ObrigadoUpsell />} />
-          <Route path="/worldinjapan" element={<WorldinJapan />} />
-          <Route path="/aguardando-pagamento" element={<Pagamento />} />
-          <Route path="/compra-esta-sendo-processada" element={<Processada />} />
-          <Route path="/compra-concluida" element={<Concluida />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+            {/* 2. Pages without Navbar */}
+            <Route path="/PageOne" element={<PageOne />} />
+            <Route path="/index" element={<IndexPage />} />
+            <Route path="/BJJ40USA" element={<BJJ40USA />} />
+            <Route path="/Performance2" element={<Performance2 />} />
+            <Route path="/BJJ40BR" element={<BJJ40BR />} />
+            <Route path="/BJJMentoria" element={<BJJMentoria />} />
+            <Route path="/Obrigado" element={<Obrigado />} />
+            <Route path="/ObrigadoUpsell" element={<ObrigadoUpsell />} />
+            <Route path="/worldinjapan" element={<WorldinJapan />} />
+            <Route path="/aguardando-pagamento" element={<Pagamento />} />
+            <Route path="/compra-esta-sendo-processada" element={<Processada />} />
+            <Route path="/compra-concluida" element={<Concluida />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-          {/* 3. App Pages with shadcn/UI components */}
-          <Route path="/dashboard/*" element={<ShadcnLayout />}>
-            <Route index element={<Dashboard />} />
-            {/* Add more shadcn/UI app pages as nested routes here if needed */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+            {/* 3. App Pages with shadcn/UI components */}
+            <Route path="/app" element={<ShadcnLayout />}>
+              <Route path="dashboard/*" element={<Dashboard />} />
+              {/* Add more shadcn/UI app pages as nested routes here if needed */}
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
