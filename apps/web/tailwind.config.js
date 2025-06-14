@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  presets: [require('@ismacopy/ui/tailwind-preset')],
+export default {
+  presets: [
+    require('../../packages/ui/tailwind-preset.js') // Use relative path instead of package name
+  ],
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-    // Include UI package components
-    "../../packages/ui/src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "../../packages/ui/src/**/*.{js,ts,jsx,tsx}"
   ],
-};
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
