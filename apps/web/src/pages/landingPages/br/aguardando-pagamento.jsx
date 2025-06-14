@@ -1,13 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PaymentPending() {
   return (
     <div className="payment-pending-page">
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={10} lg={8} className="text-center">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full md:w-5/6 lg:w-2/3 text-center">
             <div className="image-container mb-4">
               <div className="image-wrapper">
                 <img 
@@ -20,9 +18,9 @@ function PaymentPending() {
             
             <h1 className="display-4 fw-bold mb-3">Aguardando Pagamento</h1>
             <p className="lead mb-5">Em breve você terá acesso! Oss...</p>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

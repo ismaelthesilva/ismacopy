@@ -1,6 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'; // Optional custom CSS (can reuse Home.css if preferred)
 
 const Techniques = () => {
@@ -10,26 +8,26 @@ const Techniques = () => {
       {/* If Techniques is routed separately, you might include it via a layout component */}
       
       {/* Main Content */}
-      <div className="techniques-section text-white d-flex align-items-center min-vh-100">
-        <Container>
-          <Row className="text-center">
-            <Col>
-              <h1 className="display-4 fw-bold mb-3 animate__animated animate__fadeIn">
+      <div className="techniques-section text-white flex items-center min-h-screen">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap text-center">
+            <div className="w-full">
+              <h1 className="text-5xl md:text-6xl font-bold mb-3 animate__animated animate__fadeIn">
                 Techniques
               </h1>
-              <p className="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">
+              <p className="text-xl mb-4 animate__animated animate__fadeIn animate__delay-1s">
                 Explore techniques and master new moves!
               </p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer (optional, matching Home.js) */}
-      <footer className="bg-dark text-white text-center py-3">
-        <Container>
+      <footer className="bg-gray-900 text-white text-center py-3">
+        <div className="container mx-auto px-4">
           <p className="mb-0">© 2025 BJJ Champ. Roll with us soon!</p>
-        </Container>
+        </div>
       </footer>
     </>
   );
