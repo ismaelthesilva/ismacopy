@@ -1,15 +1,19 @@
 {
   "name": "ismacopy-monorepo",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "turbo run build",
-    "build:web": "turbo run build --filter=@ismacopy/web",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "type-check": "turbo run type-check"
+    "dev:web": "cd apps/web && npm run dev",
+    "dev:admin": "cd apps/admin && npm run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
-    "turbo": "latest"
+    "turbo": "^2.3.0"
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "npm@10.0.0"
 }

@@ -16,8 +16,10 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "typeRoots": ["../../node_modules/.pnpm/@types", "./node_modules/@types"],
+    "types": []
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "../../node_modules"]
 }

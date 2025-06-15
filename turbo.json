@@ -9,21 +9,12 @@
         "!.next/cache/**"
       ]
     },
-    "@ismacopy/web#build": {
-      "outputs": ["dist/**", "../../dist/web/**"]
-    },
-    "admin#build": {
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
     "dev": {
       "cache": false,
       "persistent": true
     },
     "lint": {
-      "outputs": []
-    },
-    "type-check": {
-      "outputs": []
+      "dependsOn": ["^lint"]
     }
   }
 }
