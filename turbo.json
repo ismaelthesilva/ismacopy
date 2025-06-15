@@ -9,16 +9,11 @@
         "!.next/cache/**"
       ]
     },
-    "@ismacopy/ui#build": {
-      "outputs": [
-        "dist/**"
-      ]
-    },
     "@ismacopy/web#build": {
-      "dependsOn": ["@ismacopy/ui#build"],
-      "outputs": [
-        "dist/**"
-      ]
+      "outputs": ["dist/**", "../../dist/web/**"]
+    },
+    "admin#build": {
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "dev": {
       "cache": false,

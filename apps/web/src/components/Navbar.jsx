@@ -1,14 +1,14 @@
 // apps/web/src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@ismacopy/ui';
+import { Button } from './ui/button';
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator
-} from '@ismacopy/ui';
+} from './ui/dropdown-menu';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { 

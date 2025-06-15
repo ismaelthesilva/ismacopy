@@ -4,16 +4,18 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 3000,
-    host: true
+  build: {
+    outDir: '../../dist/web',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      }
+    }
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@ismacopy/ui': path.resolve(__dirname, '../../packages/ui/src'),
-      '@ismacopy/ui/components': path.resolve(__dirname, '../../packages/ui/src/components'),
-      '@ismacopy/ui/lib': path.resolve(__dirname, '../../packages/ui/src/lib')
     }
   }
 });
