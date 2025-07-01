@@ -31,7 +31,7 @@ const Navbar = () => {
     { name: t('nav.about'), href: '/about', icon: null },
     { name: t('nav.services'), href: '/services', icon: null },
     { name: t('nav.contact'), href: '/contact', icon: null },
-    //{ name: t('nav.dashboard'), href: '/app/dashboard', icon: null }
+    { name: t('nav.portfolio'), href: '/portfolio', icon: null }
   ];
 
   const languages = [

@@ -20,7 +20,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 // 3) Pages using shadcn UI
-import Dashboard from './pages/Dashboard';
+import Portfolio from './pages/Porfolio';
 
 // Layouts
 const NavbarLayout = () => (
@@ -64,7 +64,7 @@ function App() {
 
             {/* 3. App Pages with shadcn/UI components */}
             <Route path="/app" element={<ShadcnLayout />}>
-              <Route path="dashboard/*" element={<Dashboard />} />
+              <Route path="portfolio/*" element={<Portfolio />} />
               {/* Add more shadcn/UI app pages as nested routes here if needed */}
             </Route>
           </Routes>
