@@ -31,7 +31,7 @@ const Navbar = () => {
     { name: t('nav.about'), href: '/about', icon: null },
     { name: t('nav.services'), href: '/services', icon: null },
     { name: t('nav.contact'), href: '/contact', icon: null },
-    { name: t('nav.dashboard'), href: '/app/dashboard', icon: null }
+    //{ name: t('nav.dashboard'), href: '/app/dashboard', icon: null }
   ];
 
   const languages = [
@@ -50,11 +50,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">IS</span>
-              </div>
+              <img
+                src="/logo192.png"
+                alt="Ismael Silva Logo"
+                className="w-8 h-8 rounded-lg object-cover"
+              />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Ismael Silva
+                ismaCopy
               </span>
             </Link>
           </div>
@@ -82,7 +84,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="h-8 w-8 px-0">
-                  <Globe className="h-4 w-4" />
+                  <span className="text-xl">{languages.find(l => l.code === language)?.flag}</span>
                   <span className="sr-only">{t('language')}</span>
                 </Button>
               </DropdownMenuTrigger>
