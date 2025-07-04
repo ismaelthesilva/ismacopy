@@ -99,6 +99,42 @@
     "urgency": "⏰ Apenas 5 vagas disponíveis esta semana",
     "guarantees": ["100% Consultoria Gratuita", "Plano de Estratégia Personalizado", "Sem Compromisso"]
   },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Pronto para transformar seu negócio? Vamos discutir seu projeto e criar uma estratégia que converte.",
+    "form": {
+      "title": "Envie-nos uma mensagem",
+      "name": "Nome Completo",
+      "namePlaceholder": "Seu nome completo",
+      "email": "Endereço de Email",
+      "emailPlaceholder": "hi@ismaelsilva.com",
+      "phone": "Número de Telefone",
+      "phonePlaceholder": "Somente para clientes atuais",
+      "message": "Detalhes do Projeto",
+      "messagePlaceholder": "Conte-nos sobre seu projeto, objetivos e cronograma...",
+      "submit": "Enviar Mensagem",
+      "sending": "Enviando..."
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "email": "Email",
+      "phone": "Telefone",
+      "location": "Localização",
+      "availability": "Tempo de Resposta",
+      "values": {
+        "email": "hi@ismaelsilva.com",
+        "phone": "Disponível para clientes atuais",
+        "location": "Auckland, Nova Zelândia",
+        "availability": "Em até 24 horas"
+      }
+    },
+    "features": [
+      "Consultoria inicial gratuita",
+      "Desenvolvimento de estratégia personalizada",
+      "Resposta rápida garantida",
+      "Preços transparentes"
+    ]
+  },
   "footer": {
     "title": "Ismael Silva - Especialista em Marketing Digital",
     "description": "Transformando negócios através de copy de alta conversão e tecnologia de ponta",

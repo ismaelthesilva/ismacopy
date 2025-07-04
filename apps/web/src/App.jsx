@@ -18,8 +18,6 @@ import Processada from './pages/landingPages/br/compra-esta-sendo-processada';
 import Concluida from './pages/landingPages/br/compra-concluida';
 import About from './pages/About';
 import Contact from './pages/Contact';
-
-// 3) Pages using shadcn UI
 import Portfolio from './pages/Porfolio';
 
 // Layouts
@@ -48,10 +46,12 @@ function App() {
             {/* 1. Pages with Navbar */}
             <Route element={<NavbarLayout />}>
               <Route path="/" element={<Home />} />
-              {/* Add more pages with navbar here if needed */}
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/portfolio" element={<Portfolio />} />
             </Route>
 
-            {/* 2. Pages without Navbar */}
+            {/* 2. Pages without Navbar (Landing pages) */}
             <Route path="/PageOne" element={<PageOne />} />
             <Route path="/index" element={<IndexPage />} />
             <Route path="/Obrigado" element={<Obrigado />} />
@@ -59,13 +59,10 @@ function App() {
             <Route path="/aguardando-pagamento" element={<Pagamento />} />
             <Route path="/compra-esta-sendo-processada" element={<Processada />} />
             <Route path="/compra-concluida" element={<Concluida />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
 
-            {/* 3. App Pages with shadcn/UI components */}
+            {/* 3. App Pages with shadcn/UI components (if needed in future) */}
             <Route path="/app" element={<ShadcnLayout />}>
-              <Route path="portfolio/*" element={<Portfolio />} />
-              {/* Add more shadcn/UI app pages as nested routes here if needed */}
+              {/* Add shadcn/UI app pages as nested routes here if needed */}
             </Route>
           </Routes>
         </BrowserRouter>

@@ -99,6 +99,42 @@
     "urgency": "⏰ Only 5 spots available this week",
     "guarantees": ["100% Free Consultation", "Custom Strategy Plan", "No Obligation"]
   },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your business? Let's discuss your project and create a strategy that converts.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address", 
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "message": "Project Details",
+      "messagePlaceholder": "Tell us about your project, goals, and timeline...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Response Time",
+      "values": {
+        "email": "hi@ismaelsilva.com",
+        "phone": "Available for current clients",
+        "location": "Auckland, New Zealand",
+        "availability": "Within 24 hours"
+      }
+    },
+    "features": [
+      "Free initial consultation",
+      "Custom strategy development", 
+      "Fast response guaranteed",
+      "Transparent pricing"
+    ]
+  },
   "footer": {
     "title": "Ismael Silva - Digital Marketing Expert",
     "description": "Transforming businesses through high-converting copy and cutting-edge technology",
