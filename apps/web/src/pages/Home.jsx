@@ -64,12 +64,12 @@ export default function Home() {
   const testimonials = t('testimonials.items');
 
   const clients = [
-    { name: 'TechCorp', logo: '🏢' },
-    { name: 'DigitalBoost', logo: '📈' },
-    { name: 'MarketPro', logo: '🎯' },
-    { name: 'SalesForce+', logo: '💼' },
-    { name: 'ConvertMax', logo: '🚀' },
-    { name: 'GrowthLab', logo: '🧪' }
+    { name: 'TechNova', logo: '🏢' },
+    { name: 'Boostly', logo: '📈' },
+    { name: 'MarketEdge', logo: '🎯' },
+    { name: 'SalesSuite', logo: '💼' },
+    { name: 'LaunchMax', logo: '🚀' },
+    { name: 'GrowthForge', logo: '🧪' }
   ];
 
   return (

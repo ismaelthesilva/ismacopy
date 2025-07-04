@@ -18,7 +18,7 @@ import Processada from './pages/landingPages/br/compra-esta-sendo-processada';
 import Concluida from './pages/landingPages/br/compra-concluida';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Portfolio from './pages/Porfolio';
+import Portfolio from './pages/Portfolio';
 
 // Layouts
 const NavbarLayout = () => (
