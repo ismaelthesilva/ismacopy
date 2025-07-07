@@ -3,7 +3,7 @@ import React from 'react';
 const portfolioPages = [
   {
     name: "BJJ Champ",
-    url: "https://bjjchamp.com",
+    url: "https://bjjchamp.net",
     image: "/images/bjjchamp-home.jpeg",
     description: "Brazilian Jiu-Jitsu online platform for athletes and fans."
   },
@@ -27,7 +27,7 @@ const portfolioPages = [
   },
   {
     name: "BlazeFitness",
-    url: "#",
+    url: "blazefitness-five.vercel.app",
     image: "/images/open-arms-champ.jpg",
     description: "Fitness and wellness platform (coming soon)."
   },

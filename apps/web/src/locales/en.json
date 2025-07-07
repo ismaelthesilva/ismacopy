@@ -143,5 +143,90 @@
       "about": "Learn More About Us",
       "dashboard": "Client Portal"
     }
+  },
+  "about": {
+    "badge": "👋 About ismaCopy",
+    "hero": {
+      "title": "From Speaker to",
+      "titleHighlight": "Code & Copy",
+      "description": "The journey of transforming ideas into impactful code and compelling content that drives real business results."
+    },
+    "journey": {
+      "title": "The Founder's Journey",
+      "subtitle": "From motivational speaking to digital transformation",
+      "steps": {
+        "beginning": {
+          "title": "The Beginning",
+          "period": "2008-2020",
+          "description": "Started as a motivational speaker, inspiring companies with talks on motivation, wellbeing, family values, and soft skills. Built a successful speaking business generating over $100K annually."
+        },
+        "pivot": {
+          "title": "The Pivot",
+          "period": "2020-2021",
+          "description": "During the pandemic, pivoted sales expertise into digital marketing and copywriting. Discovered the power of words in the digital space and fell in love with JavaScript development."
+        },
+        "evolution": {
+          "title": "The Evolution",
+          "period": "2021-2023",
+          "description": "Mastered fullstack JavaScript development while creating online courses for both low-ticket and high-ticket audiences. Combined technical skills with conversion-focused copywriting."
+        },
+        "ismaCopy": {
+          "title": "ismaCopy Born",
+          "period": "2023-Present",
+          "description": "Founded ismaCopy to provide small and medium companies with everything they need to reach their online audiences effectively. Blending code and copy for maximum impact."
+        }
+      }
+    },
+    "personal": {
+      "name": "Ismael Silva",
+      "title": "Founder, Copywriter & Lead Developer",
+      "story": {
+        "paragraph1": "My journey began in the world of motivational speaking, where I discovered the power of words to inspire and transform. For years, I traveled to companies across different industries, delivering talks on motivation, wellbeing, family values, and soft skills. This work taught me how to connect with audiences and drive meaningful change.",
+        "paragraph2": "Building a successful speaking business that generated over $100K annually was incredible, but 2020 changed everything. When COVID-19 hit, I had to reinvent myself completely. That's when I discovered the digital world wasn't just the future—it was the present.",
+        "paragraph3": "I channeled my sales expertise into copywriting and digital marketing, while simultaneously falling in love with JavaScript development. The same principles that made me successful as a speaker—understanding audiences, crafting compelling narratives, and driving action—translated perfectly to the digital space.",
+        "paragraph4": "Today, ismaCopy represents the evolution of that journey. We don't just build websites or write copy—we create complete digital experiences that transform how small and medium companies connect with their online audiences. Every line of code and every word we write is designed to perform and inspire."
+      }
+    },
+    "services": {
+      "title": "What We Deliver",
+      "subtitle": "Comprehensive solutions that blend technical excellence with strategic communication",
+      "development": {
+        "title": "Fullstack Development",
+        "description": "React, Node.js, TypeScript, Supabase, Vercel - building fast, responsive, and scalable web applications.",
+        "features": ["Modern JavaScript Stack", "API Integration", "Performance Optimization", "Responsive Design"]
+      },
+      "copywriting": {
+        "title": "Conversion Copywriting",
+        "description": "Strategic messaging that speaks to your audience and drives action across all digital platforms.",
+        "features": ["Landing Pages", "Email Sequences", "SEO Content", "Sales Funnels"]
+      },
+      "strategy": {
+        "title": "Digital Strategy",
+        "description": "Comprehensive digital marketing solutions that combine technical excellence with compelling storytelling.",
+        "features": ["Cross-Industry Experience", "Performance-Oriented", "Global Perspective", "Measurable Results"]
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "What drives us to deliver exceptional results",
+      "clientFocused": {
+        "title": "Client-Focused",
+        "description": "Every project starts with understanding your goals and ends with exceeding your expectations."
+      },
+      "globalMindset": {
+        "title": "Global Mindset",
+        "description": "Experience across New Zealand, Brazil, and the U.S. brings multicultural perspective to every project."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always working with the latest tools and technologies to deliver cutting-edge solutions."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Digital Presence?",
+      "description": "Let's build something that performs and inspires. Whether you need code that powers your platform or copy that powers your message, we're ready to deliver high-impact results.",
+      "strategyCall": "Get Your Free Strategy Call",
+      "portfolio": "View Our Portfolio"
+    }
   }
 }
