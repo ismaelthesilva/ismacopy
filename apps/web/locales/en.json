@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "badge": "🔥 Converting 3x Better Than Industry Average",
+    "title": "Turn Your Traffic Into",
+    "titleHighlight": "Paying Customers",
+    "description": "Complete digital marketing solutions that convert visitors into buyers. From copywriting to landing pages, video creation to ad campaigns -",
+    "descriptionHighlight": "all in one place.",
+    "ctaPrimary": "Get Your Free Strategy Call",
+    "ctaSecondary": "Watch Success Stories",
+    "socialProof": {
+      "clients": "Happy Clients",
+      "revenue": "Generated",
+      "roi": "Average ROI"
+    }
+  },
+  "clients": {
+    "title": "Trusted by Leading Companies"
+  },
+  "services": {
+    "badge": "Complete Solution",
+    "title": "Everything You Need to",
+    "titleHighlight": "Scale Your Business",
+    "description": "Stop juggling multiple agencies. Get copywriting, web development, video creation, and ad management from one expert team.",
+    "copywriting": {
+      "title": "Copywriting That Converts",
+      "description": "Psychological triggers and persuasive copy that turns visitors into buyers",
+      "features": ["Sales letters", "Email sequences", "Ad copy", "VSL scripts"]
+    },
+    "landingPages": {
+      "title": "Landing Pages & Funnels",
+      "description": "High-converting landing pages optimized for Facebook and Google Ads",
+      "features": ["Mobile-optimized", "A/B tested", "Fast loading", "Analytics integrated"]
+    },
+    "videoCreation": {
+      "title": "Video & Image Creation",
+      "description": "Professional video sales letters and stunning visuals that sell",
+      "features": ["VSL production", "Image editing", "Social media content", "Ad creatives"]
+    },
+    "digitalMarketing": {
+      "title": "Complete Digital Marketing",
+      "description": "End-to-end campaigns from ad creation to Hotmart integration",
+      "features": ["Campaign setup", "Audience targeting", "Conversion tracking", "ROI optimization"]
+    }
+  },
+  "technologies": {
+    "badge": "Cutting-Edge Tech",
+    "title": "Built With The",
+    "titleHighlight": "Latest Technologies",
+    "description": "We use the most advanced tools to ensure your campaigns perform at their peak",
+    "items": {
+      "react": "Lightning-fast web development",
+      "tailwind": "Beautiful, responsive designs",
+      "shadcn": "Modern component library",
+      "facebook": "Targeted advertising campaigns",
+      "google": "Search & display advertising",
+      "hotmart": "Digital product sales funnels",
+      "video": "Professional video content",
+      "landing": "High-converting sales pages"
+    }
+  },
+  "testimonials": {
+    "badge": "Real Results",
+    "title": "What Our Clients Say About",
+    "titleHighlight": "Working With Us",
+    "items": [
+      {
+        "name": "Maria Santos",
+        "company": "Fitness Digital",
+        "text": "Ismael increased our conversion rate by 340% in just 30 days. His landing pages are pure gold!",
+        "result": "+340% conversions"
+      },
+      {
+        "name": "Carlos Rodriguez",
+        "company": "Tech Startup",
+        "text": "The VSL Ismael created for us generated over R$150k in the first month. Incredible ROI!",
+        "result": "R$150k in 30 days"
+      },
+      {
+        "name": "Ana Costa",
+        "company": "Online Course Creator",
+        "text": "His copywriting skills are unmatched. Every email sequence he writes brings in sales.",
+        "result": "+250% email revenue"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "🚨 Limited Time Offer",
+    "title": "Ready to",
+    "titleHighlight": "10x Your Conversions?",
+    "description": "Book your free strategy call now and discover how we can transform your traffic into a profit-generating machine. No fluff, just proven strategies that work.",
+    "button": "Book Your FREE Strategy Call",
+    "urgency": "⏰ Only 5 spots available this week",
+    "guarantees": ["100% Free Consultation", "Custom Strategy Plan", "No Obligation"]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your business? Let's discuss your project and create a strategy that converts.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address", 
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "message": "Project Details",
+      "messagePlaceholder": "Tell us about your project, goals, and timeline...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Response Time",
+      "values": {
+        "email": "hi@ismaelsilva.com",
+        "phone": "Available for current clients",
+        "location": "Auckland, New Zealand",
+        "availability": "Within 24 hours"
+      }
+    },
+    "features": [
+      "Free initial consultation",
+      "Custom strategy development", 
+      "Fast response guaranteed",
+      "Transparent pricing"
+    ]
+  },
+  "footer": {
+    "title": "Ismael Silva - Digital Marketing Expert",
+    "description": "Transforming businesses through high-converting copy and cutting-edge technology",
+    "links": {
+      "contact": "Get In Touch",
+      "about": "Learn More About Us",
+      "dashboard": "Client Portal"
+    }
+  },
+  "about": {
+    "badge": "👋 About ismaCopy",
+    "hero": {
+      "title": "From Speaker to",
+      "titleHighlight": "Code & Copy",
+      "description": "The journey of transforming ideas into impactful code and compelling content that drives real business results."
+    },
+    "journey": {
+      "title": "The Founder's Journey",
+      "subtitle": "From motivational speaking to digital transformation",
+      "steps": {
+        "beginning": {
+          "title": "The Beginning",
+          "period": "2008-2020",
+          "description": "Started as a motivational speaker, inspiring companies with talks on motivation, wellbeing, family values, and soft skills. Built a successful speaking business generating over $100K annually."
+        },
+        "pivot": {
+          "title": "The Pivot",
+          "period": "2020-2021",
+          "description": "During the pandemic, pivoted sales expertise into digital marketing and copywriting. Discovered the power of words in the digital space and fell in love with JavaScript development."
+        },
+        "evolution": {
+          "title": "The Evolution",
+          "period": "2021-2023",
+          "description": "Mastered fullstack JavaScript development while creating online courses for both low-ticket and high-ticket audiences. Combined technical skills with conversion-focused copywriting."
+        },
+        "ismaCopy": {
+          "title": "ismaCopy Born",
+          "period": "2023-Present",
+          "description": "Founded ismaCopy to provide small and medium companies with everything they need to reach their online audiences effectively. Blending code and copy for maximum impact."
+        }
+      }
+    },
+    "personal": {
+      "name": "Ismael Silva",
+      "title": "Founder, Copywriter & Lead Developer",
+      "story": {
+        "paragraph1": "My journey began in the world of motivational speaking, where I discovered the power of words to inspire and transform. For years, I traveled to companies across different industries, delivering talks on motivation, wellbeing, family values, and soft skills. This work taught me how to connect with audiences and drive meaningful change.",
+        "paragraph2": "Building a successful speaking business that generated over $100K annually was incredible, but 2020 changed everything. When COVID-19 hit, I had to reinvent myself completely. That's when I discovered the digital world wasn't just the future—it was the present.",
+        "paragraph3": "I channeled my sales expertise into copywriting and digital marketing, while simultaneously falling in love with JavaScript development. The same principles that made me successful as a speaker—understanding audiences, crafting compelling narratives, and driving action—translated perfectly to the digital space.",
+        "paragraph4": "Today, ismaCopy represents the evolution of that journey. We don't just build websites or write copy—we create complete digital experiences that transform how small and medium companies connect with their online audiences. Every line of code and every word we write is designed to perform and inspire."
+      }
+    },
+    "services": {
+      "title": "What We Deliver",
+      "subtitle": "Comprehensive solutions that blend technical excellence with strategic communication",
+      "development": {
+        "title": "Fullstack Development",
+        "description": "React, Node.js, TypeScript, Supabase, Vercel - building fast, responsive, and scalable web applications.",
+        "features": ["Modern JavaScript Stack", "API Integration", "Performance Optimization", "Responsive Design"]
+      },
+      "copywriting": {
+        "title": "Conversion Copywriting",
+        "description": "Strategic messaging that speaks to your audience and drives action across all digital platforms.",
+        "features": ["Landing Pages", "Email Sequences", "SEO Content", "Sales Funnels"]
+      },
+      "strategy": {
+        "title": "Digital Strategy",
+        "description": "Comprehensive digital marketing solutions that combine technical excellence with compelling storytelling.",
+        "features": ["Cross-Industry Experience", "Performance-Oriented", "Global Perspective", "Measurable Results"]
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "What drives us to deliver exceptional results",
+      "clientFocused": {
+        "title": "Client-Focused",
+        "description": "Every project starts with understanding your goals and ends with exceeding your expectations."
+      },
+      "globalMindset": {
+        "title": "Global Mindset",
+        "description": "Experience across New Zealand, Brazil, and the U.S. brings multicultural perspective to every project."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always working with the latest tools and technologies to deliver cutting-edge solutions."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Digital Presence?",
+      "description": "Let's build something that performs and inspires. Whether you need code that powers your platform or copy that powers your message, we're ready to deliver high-impact results.",
+      "strategyCall": "Get Your Free Strategy Call",
+      "portfolio": "View Our Portfolio"
+    }
+  },
+  "language": "Language",
+  "theme": "Theme"
+}
