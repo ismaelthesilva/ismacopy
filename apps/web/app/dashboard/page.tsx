@@ -136,6 +136,175 @@ export default function Dashboard() {
           </Card>
         </div>
 
+        {/* Financial Metrics Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Financial Performance Metrics</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg text-slate-900">Quick Overview</CardTitle>
+                <CardDescription>Key financial metrics from major investments</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-slate-600 mb-4">
+                  Real financial data including Revenue, Net Income, ROE, Net Margin, Net Debt, EBITDA, and dividend percentages for companies that pay dividends.
+                </p>
+                <Button 
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700"
+                  onClick={() => router.push('/dashboard/financials')}
+                >
+                  View Detailed Financial Analysis
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-lg text-slate-900">Data Coverage</CardTitle>
+                <CardDescription>5-year financial history (2019-2023)</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span>Brazilian Stocks:</span>
+                    <Badge variant="secondary">8 companies</Badge>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>US Stocks:</span>
+                    <Badge variant="secondary">8 companies</Badge>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Brazilian FIIs:</span>
+                    <Badge variant="secondary">7 funds</Badge>
+                  </div>
+                  <div className="flex justify-between mt-3">
+                    <span className="font-semibold">Dividend Payers:</span>
+                    <Badge variant="outline" className="text-green-600">15+ assets</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          {/* Brazilian Stocks */}
+          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-6">
+            <CardHeader>
+              <CardTitle className="text-xl text-slate-900">Brazilian Stocks - Financial Data (2019-2023)</CardTitle>
+              <CardDescription>Receita Líquida, Lucro Líquido, ROE, Margem Líquida, Dívida Líquida, EBITDA</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left p-2">Symbol</th>
+                      <th className="text-left p-2">Company</th>
+                      <th className="text-left p-2">ROE 2023</th>
+                      <th className="text-left p-2">Margem Líq. 2023</th>
+                      <th className="text-left p-2">Dividend %</th>
+                      <th className="text-left p-2">Revenue Growth</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">PETR4</td>
+                      <td className="p-2">Petrobras PN</td>
+                      <td className="p-2">24.8%</td>
+                      <td className="p-2">19.8%</td>
+                      <td className="p-2 text-green-600 font-semibold">12.45%</td>
+                      <td className="p-2">78% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">VALE3</td>
+                      <td className="p-2">Vale ON</td>
+                      <td className="p-2">13.2%</td>
+                      <td className="p-2">16.3%</td>
+                      <td className="p-2 text-green-600 font-semibold">18.67%</td>
+                      <td className="p-2">15% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">ITUB4</td>
+                      <td className="p-2">Itaú Unibanco PN</td>
+                      <td className="p-2">19.2%</td>
+                      <td className="p-2">25.2%</td>
+                      <td className="p-2 text-green-600 font-semibold">6.78%</td>
+                      <td className="p-2">20% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">WEGE3</td>
+                      <td className="p-2">WEG ON</td>
+                      <td className="p-2">21.3%</td>
+                      <td className="p-2">24.9%</td>
+                      <td className="p-2 text-green-600 font-semibold">1.23%</td>
+                      <td className="p-2">61% (2019-2023)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* US Stocks */}
+          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-6">
+            <CardHeader>
+              <CardTitle className="text-xl text-slate-900">US Stocks - Financial Data (2019-2023)</CardTitle>
+              <CardDescription>Net Revenue, Net Income, ROE, Net Margin, Net Debt, EBITDA</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left p-2">Symbol</th>
+                      <th className="text-left p-2">Company</th>
+                      <th className="text-left p-2">ROE 2023</th>
+                      <th className="text-left p-2">Net Margin 2023</th>
+                      <th className="text-left p-2">Dividend %</th>
+                      <th className="text-left p-2">Revenue Growth</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">AAPL</td>
+                      <td className="p-2">Apple Inc.</td>
+                      <td className="p-2">160.6%</td>
+                      <td className="p-2">25.3%</td>
+                      <td className="p-2 text-green-600 font-semibold">0.43%</td>
+                      <td className="p-2">47% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">MSFT</td>
+                      <td className="p-2">Microsoft Corporation</td>
+                      <td className="p-2">40.0%</td>
+                      <td className="p-2">34.1%</td>
+                      <td className="p-2 text-green-600 font-semibold">0.68%</td>
+                      <td className="p-2">68% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">NVDA</td>
+                      <td className="p-2">NVIDIA Corporation</td>
+                      <td className="p-2">36.0%</td>
+                      <td className="p-2">48.9%</td>
+                      <td className="p-2 text-green-600 font-semibold">0.09%</td>
+                      <td className="p-2">458% (2019-2023)</td>
+                    </tr>
+                    <tr className="border-b hover:bg-slate-50">
+                      <td className="p-2 font-semibold">TSLA</td>
+                      <td className="p-2">Tesla Inc.</td>
+                      <td className="p-2">28.1%</td>
+                      <td className="p-2">15.5%</td>
+                      <td className="p-2 text-gray-500">0.00%</td>
+                      <td className="p-2">294% (2019-2023)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Category Navigation */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           {/* Global Investments */}
