@@ -13,6 +13,7 @@ import {
 } from './ui/dropdown-menu';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
+import LoginModal from './auth/LoginModal';
 import { 
   Moon, 
   Sun, 
@@ -32,6 +33,7 @@ const Navbar = () => {
     { name: t('nav.home') || 'Home', href: '/', icon: null },
     { name: t('nav.about') || 'About', href: '/about', icon: null },
     { name: t('nav.services') || 'Services', href: '/services', icon: null },
+    { name: 'Investments', href: '/login', icon: null },
     { name: t('nav.contact') || 'Contact', href: '/contact', icon: null },
     { name: t('nav.portfolio') || 'Portfolio', href: '/portfolio', icon: null }
   ];
@@ -121,10 +123,8 @@ const Navbar = () => {
               <span className="sr-only">{t('theme') || 'Theme'}</span>
             </Button>
 
-            {/* CTA Button */}
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-              Get Started
-            </Button>
+            {/* Login Modal */}
+            <LoginModal />
           </div>
 
           {/* Mobile menu button */}
@@ -200,9 +200,9 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4 pb-2">
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                Get Started
-              </Button>
+              <div className="w-full">
+                <LoginModal />
+              </div>
             </div>
           </div>
         </div>

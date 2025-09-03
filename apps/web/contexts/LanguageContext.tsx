@@ -20,7 +20,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    // Return default values during SSR or when provider is not available
+    return {
+      language: 'en',
+      changeLanguage: () => {},
+      t: (key: string, options?: { returnObjects?: boolean }) => key
+    };
   }
   return context;
 };

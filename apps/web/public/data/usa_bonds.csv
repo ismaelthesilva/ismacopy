@@ -1,0 +1,9 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+TLT,iShares 20+ Year Treasury Bond ETF,Bond,Long-term US Treasury bonds with 20+ year maturity,134.50,169.95,142.87,101.23,89.45,92.15,3.21,0.15,Low,USA
+IEF,iShares 7-10 Year Treasury Bond ETF,Bond,Intermediate-term Treasury bonds,108.45,119.67,113.45,102.34,98.67,100.23,2.89,0.15,Low,USA
+SHY,iShares 1-3 Year Treasury Bond ETF,Bond,Short-term Treasury bonds for capital preservation,83.23,86.45,84.67,81.23,82.45,83.12,1.95,0.15,Low,USA
+LQD,iShares iBoxx Investment Grade Corporate Bond ETF,Bond,Investment-grade corporate bonds,121.45,138.67,130.23,115.67,119.45,122.34,3.45,0.14,Low,USA
+HYG,iShares iBoxx High Yield Corporate Bond ETF,Bond,High-yield corporate bonds for higher income,87.23,84.56,87.45,79.23,82.67,84.89,7.82,0.49,Medium,USA
+AGG,iShares Core U.S. Aggregate Bond ETF,Bond,Broad-based bond market exposure,110.45,116.78,113.23,101.45,105.67,107.89,2.67,0.03,Low,USA
+BND,Vanguard Total Bond Market ETF,Bond,Total bond market index fund,84.12,87.45,85.23,78.90,81.45,82.67,3.12,0.03,Low,USA
+TIPS,iShares TIPS Bond ETF,Bond,Treasury Inflation-Protected Securities,115.67,126.78,128.45,121.23,124.56,126.89,2.34,0.19,Low,USA

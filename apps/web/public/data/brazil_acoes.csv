@@ -1,0 +1,9 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+PETR4,Petrobras PN,Ação,Maior empresa de petróleo e gás do Brasil,28.73,22.97,32.23,31.12,39.45,42.67,12.45,,High,Brazil
+VALE3,Vale ON,Ação,Gigante da mineração - minério de ferro e metais,51.23,68.45,91.34,71.23,65.89,58.45,18.67,,High,Brazil
+ITUB4,Itaú Unibanco PN,Ação,Maior banco privado do Brasil,35.67,24.89,26.78,23.45,25.67,28.34,6.78,,Medium,Brazil
+BBDC4,Bradesco PN,Ação,Um dos maiores bancos do país,22.45,19.78,18.23,15.67,13.89,14.56,7.89,,Medium,Brazil
+ABEV3,Ambev ON,Ação,Cervejaria líder na América Latina,17.89,12.45,15.67,13.89,11.23,10.89,5.67,,Low,Brazil
+WEGE3,WEG ON,Ação,Equipamentos elétricos e automação industrial,89.45,98.67,41.23,35.67,45.89,52.34,1.23,,Medium,Brazil
+B3SA3,B3 ON,Ação,Bolsa de valores brasileira,45.67,56.78,10.89,9.78,11.45,12.67,3.45,,Medium,Brazil
+MGLU3,Magazine Luiza ON,Ação,Varejo online e físico,25.67,22.45,8.67,3.45,4.23,5.78,0.00,,High,Brazil

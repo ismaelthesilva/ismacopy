@@ -1,0 +1,6 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level
+AAPL,Apple Inc,Stock,Technology giant specializing in consumer electronics and software,157.74,132.69,177.57,129.93,192.53,195.89,0.44,,High
+MSFT,Microsoft Corporation,Stock,Multinational technology company focused on cloud computing and productivity software,106.96,220.79,330.59,239.82,374.51,384.30,0.68,,High
+GOOGL,Alphabet Inc Class A,Stock,Parent company of Google focusing on search advertising and cloud services,1046.23,1751.88,2893.59,2237.12,2809.34,2845.67,0.00,,High
+AMZN,Amazon.com Inc,Stock,E-commerce and cloud computing giant,1847.84,3201.68,3334.34,2447.89,3201.45,3289.12,0.00,,High
+TSLA,Tesla Inc,Stock,Electric vehicle and clean energy company,418.33,705.67,1199.78,381.58,1084.59,1156.78,0.00,,High

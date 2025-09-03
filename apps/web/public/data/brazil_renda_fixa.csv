@@ -1,0 +1,8 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+SELIC,Taxa Selic,Renda Fixa,Taxa básica de juros da economia brasileira,6.50,2.00,9.25,13.75,11.75,10.50,10.50,,Low,Brazil
+CDI,Certificado de Depósito Interbancário,Renda Fixa,Referência para investimentos de renda fixa,6.40,1.90,9.15,13.65,11.65,10.40,10.40,,Low,Brazil
+LTN_2025,Letra do Tesouro Nacional 2025,Renda Fixa,Título público prefixado vencimento 2025,850.45,920.67,789.45,756.34,834.56,867.89,12.45,,Low,Brazil
+NTN-B_2035,Nota do Tesouro Nacional IPCA+ 2035,Renda Fixa,Título indexado à inflação vencimento 2035,2890.45,3456.78,3234.67,2789.45,3145.67,3289.45,5.78,,Low,Brazil
+LFT_2025,Letra Financeira do Tesouro 2025,Renda Fixa,Título pós-fixado indexado à Selic,7890.45,7965.78,8234.56,8567.89,8789.45,8956.78,10.45,,Low,Brazil
+CDB_120,CDB 120% CDI,Renda Fixa,Certificado de Depósito Bancário 120% do CDI,1000.00,1019.00,1112.34,1278.45,1456.78,1567.89,12.48,,Low,Brazil
+IPCA,Índice de Preços ao Consumidor Amplo,Renda Fixa,Principal índice de inflação do Brasil,4.31,4.52,10.06,5.79,4.62,3.95,3.95,,Low,Brazil

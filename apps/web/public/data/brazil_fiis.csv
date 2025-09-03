@@ -1,0 +1,8 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+HGLG11,CSHG Logística FII,FII,Fundo imobiliário focado em galpões logísticos,145.67,98.45,132.45,156.78,189.34,195.67,8.45,,Medium,Brazil
+XPML11,XP Malls FII,FII,Shopping centers e propriedades comerciais,98.45,67.89,89.67,95.34,108.45,112.78,9.67,,Medium,Brazil
+MXRF11,Maxi Renda FII,FII,Fundos de fundos imobiliários diversificados,10.45,9.78,10.23,10.67,11.45,11.89,7.89,,Low,Brazil
+VISC11,Vinci Shopping Centers FII,FII,Shopping centers de alto padrão,89.45,78.67,92.34,98.45,105.67,108.23,8.23,,Medium,Brazil
+BCFF11,BC Fundos FII,FII,Fundos de fundos - diversificação máxima,67.89,89.45,95.67,87.34,91.23,94.56,8.67,,Low,Brazil
+KNRI11,Kinea Renda Imobiliária FII,FII,Imóveis corporativos e comerciais,89.67,145.78,167.45,189.23,198.67,205.34,9.12,,Medium,Brazil
+HFOF11,Hedge Top FOF FII,FII,Fundo de fundos imobiliários,67.34,78.45,89.67,92.34,96.78,98.45,8.34,,Low,Brazil

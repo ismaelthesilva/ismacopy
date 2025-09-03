@@ -1,0 +1,6 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level
+SPY,SPDR S&P 500 ETF,ETF,Tracks the S&P 500 index for broad US market exposure,322.45,373.88,477.71,382.86,476.23,485.32,1.34,0.0945,Medium
+VTI,Vanguard Total Stock Market ETF,ETF,Provides exposure to the entire US stock market,152.34,200.12,241.89,201.45,245.67,252.18,1.41,0.03,Medium
+VXUS,Vanguard Total International Stock ETF,ETF,Invests in international developed and emerging markets,54.23,58.45,64.12,52.34,59.87,61.45,2.18,0.08,Medium
+VEA,Vanguard FTSE Developed Markets ETF,ETF,Exposure to developed international equity markets,41.23,43.56,51.34,42.78,48.92,50.15,2.85,0.05,Medium
+VWO,Vanguard Emerging Markets Stock ETF,ETF,Invests in emerging market equities,42.34,49.23,52.78,39.45,42.67,44.23,4.12,0.10,High

@@ -1,0 +1,7 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+VNQ,Vanguard Real Estate ETF,REIT,Diversified real estate investment trust exposure,93.44,86.25,109.64,82.26,87.45,92.67,3.45,0.12,Medium,USA
+SCHH,Schwab U.S. REIT ETF,REIT,Low-cost exposure to US real estate market,46.78,43.25,54.89,41.23,43.67,46.12,3.78,0.07,Medium,USA
+IYR,iShares U.S. Real Estate ETF,REIT,Comprehensive US real estate sector coverage,94.67,87.34,111.45,83.67,88.94,94.23,3.23,0.42,Medium,USA
+XLRE,Real Estate Select Sector SPDR Fund,REIT,Real estate companies from S&P 500,37.89,35.67,45.78,36.45,38.67,41.23,2.89,0.10,Medium,USA
+REZ,iShares Residential and Multisector Real Estate ETF,REIT,Residential real estate focus,78.45,72.34,92.67,73.45,78.23,82.56,4.12,0.48,Medium,USA
+RWR,SPDR Dow Jones REIT ETF,REIT,Broad REIT market exposure,105.67,97.45,124.78,98.67,104.23,110.45,3.67,0.25,Medium,USA

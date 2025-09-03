@@ -203,7 +203,7 @@ export default function About() {
                   <CardContent className="flex flex-col flex-grow">
                     <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
                     <div className="space-y-2 mt-auto">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature: string, featureIndex: number) => (
                         <div key={featureIndex} className="flex items-center text-sm text-slate-600">
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}

@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '../components/ui/button.tsx';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card.tsx';
-import { Badge } from '../components/ui/badge.tsx';
-import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar.tsx';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { useLanguage } from '../contexts/LanguageContext';
 import { 
   ArrowRight, 

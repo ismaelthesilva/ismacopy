@@ -1,0 +1,9 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+SPY,SPDR S&P 500 ETF Trust,ETF,Tracks the S&P 500 index for broad US market exposure,321.86,373.88,477.71,385.52,459.45,512.34,1.23,0.09,Low,USA
+VTI,Vanguard Total Stock Market ETF,ETF,Total US stock market exposure,157.50,200.37,243.50,201.89,235.67,265.89,1.45,0.03,Low,USA
+VXUS,Vanguard Total International Stock ETF,ETF,International developed and emerging markets,52.45,60.89,64.78,52.34,58.67,62.45,2.78,0.08,Medium,USA
+VEA,Vanguard FTSE Developed Markets ETF,ETF,International developed markets exposure,41.23,48.67,51.45,43.78,47.89,50.23,2.89,0.05,Medium,USA
+VWO,Vanguard FTSE Emerging Markets ETF,ETF,Emerging markets equity exposure,43.25,50.78,51.89,41.67,44.56,47.89,3.45,0.10,High,USA
+QQQ,Invesco QQQ Trust,ETF,Nasdaq 100 technology focus,187.47,313.74,408.71,264.11,391.23,445.67,0.67,0.20,Medium,USA
+IWM,iShares Russell 2000 ETF,ETF,Small-cap US companies,156.85,196.77,224.58,179.84,198.76,215.43,1.23,0.19,Medium,USA
+VYM,Vanguard High Dividend Yield ETF,ETF,High dividend-yielding US stocks,89.78,89.05,109.50,104.23,115.67,118.45,2.98,0.06,Low,USA

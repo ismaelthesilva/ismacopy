@@ -1,0 +1,9 @@
+symbol,name,category,description,year_2019,year_2020,year_2021,year_2022,year_2023,current_price,dividend_yield,expense_ratio,risk_level,country
+AAPL,Apple Inc.,Stock,Technology giant specializing in consumer electronics,293.65,132.69,177.57,129.93,191.24,220.85,0.43,,Medium,USA
+MSFT,Microsoft Corporation,Stock,Leading software and cloud computing company,157.71,221.02,331.62,239.82,374.51,420.45,0.68,,Medium,USA
+GOOGL,Alphabet Inc. Class A,Stock,Search engine and digital advertising leader,134.04,1760.74,2893.59,2237.40,2692.69,2850.75,0.00,,Medium,USA
+AMZN,Amazon.com Inc.,Stock,E-commerce and cloud computing giant,1847.84,3256.93,3334.34,1437.09,2540.26,3150.78,0.00,,High,USA
+TSLA,Tesla Inc.,Stock,Electric vehicle and clean energy company,418.33,705.67,1056.78,123.18,248.48,395.67,0.00,,High,USA
+NVDA,NVIDIA Corporation,Stock,Leading AI and graphics processing company,236.69,520.83,294.11,146.14,481.14,850.45,0.09,,High,USA
+META,Meta Platforms Inc.,Stock,Social media and metaverse technology company,205.25,273.16,338.54,120.34,353.96,420.67,0.00,,High,USA
+BRK.B,Berkshire Hathaway Inc. Class B,Stock,Diversified holding company led by Warren Buffett,216.39,227.06,290.88,301.66,360.44,385.67,0.00,,Low,USA
