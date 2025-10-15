@@ -1,3 +1,5 @@
+'use client';
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -6,7 +8,7 @@ export default function NotFound() {
           <h1 className="text-6xl font-bold text-gray-900">404</h1>
           <h2 className="text-2xl font-semibold text-gray-700">Page Not Found</h2>
           <p className="text-gray-600 max-w-md">
-            The page you're looking for doesn't exist or has been moved.
+            The page you're looking for doesn't exist.
           </p>
         </div>
         
@@ -16,12 +18,6 @@ export default function NotFound() {
             className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Go Home
-          </a>
-          <a 
-            href="/dashboard"
-            className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors"
-          >
-            Dashboard
           </a>
         </div>
       </div>
