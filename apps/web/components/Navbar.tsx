@@ -33,7 +33,7 @@ const Navbar = () => {
     { name: t('nav.home') || 'Home', href: '/', icon: null },
     { name: t('nav.about') || 'About', href: '/about', icon: null },
     { name: t('nav.services') || 'Services', href: '/services', icon: null },
-    { name: 'Investments', href: '/login', icon: null },
+    { name: 'Investments', href: '/dashboard', icon: null },
     { name: t('nav.contact') || 'Contact', href: '/contact', icon: null },
     { name: t('nav.portfolio') || 'Portfolio', href: '/portfolio', icon: null }
   ];
