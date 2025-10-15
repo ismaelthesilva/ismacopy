@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -24,6 +24,11 @@ import {
 
 export default function Home() {
   const { t } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const technologies = [
     { name: 'React & Vite', icon: '⚛️', description: t('technologies.items.react') },
@@ -94,7 +99,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-background text-foreground">
+    <div className="min-h-screen bg-white dark:bg-background text-foreground" suppressHydrationWarning={true}>
       {/* Hero Section */}
       {/* Hero Section - Keep same purple gradient for both modes */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -107,42 +112,44 @@ export default function Home() {
         
         <div className="relative container mx-auto px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold animate-pulse">
-              {t('hero.badge')}
-            </Badge>
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              {t('hero.title')} 
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> {t('hero.titleHighlight')}</span>
-            </h1>
-            <p className="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed text-gray-300">
-              {t('hero.description')} 
-              <strong className="text-yellow-400"> {t('hero.descriptionHighlight')}</strong>
-            </p>
+            <div suppressHydrationWarning={true}>
+              <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold animate-pulse">
+                {isClient ? t('hero.badge') : '🔥 Converting 3x Better Than Industry Average'}
+              </Badge>
+              <h1 className="text-4xl sm:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                {isClient ? t('hero.title') : 'Turn Your Traffic Into'} 
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> {isClient ? t('hero.titleHighlight') : 'Paying Customers'}</span>
+              </h1>
+              <p className="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed text-gray-300">
+                {isClient ? t('hero.description') : 'Complete digital marketing solutions that convert visitors into buyers. From copywriting that sells to websites that perform, I deliver results that grow your business.'} 
+                <strong className="text-yellow-400"> {isClient ? t('hero.descriptionHighlight') : 'Results that actually matter.'}</strong>
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" suppressHydrationWarning={true}>
               <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
-                {t('hero.ctaPrimary')}
+                {isClient ? t('hero.ctaPrimary') : 'Get Started Today'}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-foreground/30 text-foreground hover:bg-foreground/10 backdrop-blur-sm">
                 <Play className="mr-2 h-5 w-5" />
-                {t('hero.ctaSecondary')}
+                {isClient ? t('hero.ctaSecondary') : 'Watch Demo'}
               </Button>
             </div>
 
             {/* Social Proof */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-300">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-300" suppressHydrationWarning={true}>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-blue-400" />
-                <span>500+ {t('hero.socialProof.clients')}</span>
+                <span>500+ {isClient ? t('hero.socialProof.clients') : 'Happy Clients'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-green-400" />
-                <span>R$5M+ {t('hero.socialProof.revenue')}</span>
+                <span>R$5M+ {isClient ? t('hero.socialProof.revenue') : 'Generated Revenue'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-yellow-400" />
-                <span>3.4x {t('hero.socialProof.roi')}</span>
+                <span>3.4x {isClient ? t('hero.socialProof.roi') : 'Average ROI'}</span>
               </div>
             </div>
           </div>
@@ -152,8 +159,8 @@ export default function Home() {
       {/* Client Logos */}
       <section className="py-12 bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
         <div className="container mx-auto px-4">
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8 font-medium">
-            {t('clients.title')}
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-8 font-medium" suppressHydrationWarning={true}>
+            {isClient ? t('clients.title') : 'Trusted by leading companies'}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {clients.map((client, index) => (
@@ -169,15 +176,15 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-20 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" suppressHydrationWarning={true}>
             <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-              {t('services.badge')}
+              {isClient ? t('services.badge') : '🚀 Services'}
             </Badge>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              {t('services.title')} <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{t('services.titleHighlight')}</span>
+              {isClient ? t('services.title') : 'What I'} <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{isClient ? t('services.titleHighlight') : 'Deliver'}</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {t('services.description')}
+              {isClient ? t('services.description') : 'Complete digital solutions that drive results and grow your business through proven strategies.'}
             </p>
           </div>
 
@@ -216,15 +223,15 @@ export default function Home() {
       {/* Technologies Section */}
       <section className="py-20 bg-gray-50 dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" suppressHydrationWarning={true}>
             <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white">
-              {t('technologies.badge')}
+              {isClient ? t('technologies.badge') : '⚡ Technologies'}
             </Badge>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              {t('technologies.title')} <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">{t('technologies.titleHighlight')}</span>
+              {isClient ? t('technologies.title') : 'Modern'} <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">{isClient ? t('technologies.titleHighlight') : 'Stack'}</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              {t('technologies.description')}
+              {isClient ? t('technologies.description') : 'Cutting-edge tools and technologies that power exceptional results.'}
             </p>
           </div>
 
@@ -249,12 +256,12 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-blue-100 via-purple-50 to-blue-100 dark:from-blue-900 dark:via-purple-900 dark:to-blue-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" suppressHydrationWarning={true}>
             <Badge className="mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black">
-              {t('testimonials.badge')}
+              {isClient ? t('testimonials.badge') : '⭐ Testimonials'}
             </Badge>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              {t('testimonials.title')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('testimonials.titleHighlight')}</span>
+              {isClient ? t('testimonials.title') : 'What Clients'} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{isClient ? t('testimonials.titleHighlight') : 'Say'}</span>
             </h2>
           </div>
 
@@ -300,24 +307,24 @@ export default function Home() {
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-bounce"></div>
         </div>
         
-        <div className="relative container mx-auto px-4 text-center">
+        <div className="relative container mx-auto px-4 text-center" suppressHydrationWarning={true}>
           <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-600 text-white animate-pulse">
-            {t('cta.badge')}
+            {isClient ? t('cta.badge') : '🚀 Ready to Start?'}
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            {t('cta.title')} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{t('cta.titleHighlight')}</span>
+            {isClient ? t('cta.title') : 'Ready to Transform Your'} <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">{isClient ? t('cta.titleHighlight') : 'Business?'}</span>
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-600 dark:text-gray-300">
-            {t('cta.description')}
+            {isClient ? t('cta.description') : 'Get started today and transform your business with proven digital marketing strategies that deliver real results.'}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-700 hover:from-red-700 hover:to-orange-800 text-white font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-red-500/25 transition-all duration-300">
-              {t('cta.button')}
+              {isClient ? t('cta.button') : 'Get Started Now'}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <div className="text-sm text-gray-500 dark:text-gray-400">
-              {t('cta.urgency')}
+              {isClient ? t('cta.urgency') : 'Limited time offer - Act now!'}
             </div>
           </div>
 
@@ -334,16 +341,16 @@ export default function Home() {
 
       {/* Footer */}
       <section className="py-12 bg-gray-900 dark:bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center" suppressHydrationWarning={true}>
           <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            {t('footer.title')}
+            {isClient ? t('footer.title') : 'Let\'s Work Together'}
           </h3>
           <p className="text-gray-400 mb-6">
-            {t('footer.description')}
+            {isClient ? t('footer.description') : 'Ready to take your business to the next level? Get in touch today.'}
           </p>
           <div className="flex justify-center gap-6">
             <Link href="/contact" className="text-blue-400 hover:text-blue-300 transition-colors">
-              {t('footer.links.contact')}
+              {isClient ? t('footer.links.contact') : 'Contact'}
             </Link>
             <Link href="/about" className="text-blue-400 hover:text-blue-300 transition-colors">
               {t('footer.links.about')}

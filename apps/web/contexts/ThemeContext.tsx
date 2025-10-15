@@ -14,15 +14,25 @@ interface ThemeProviderProps {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const useTheme = (): ThemeContextType => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    // Return default values during SSR or when provider is not available
-    return {
-      theme: 'light',
-      toggleTheme: () => {}
-    };
+  // Default return object
+  const defaultReturn: ThemeContextType = {
+    theme: 'light',
+    toggleTheme: () => {}
+  };
+
+  // During SSR, return default values immediately
+  if (typeof window === 'undefined') {
+    return defaultReturn;
   }
-  return context;
+
+  try {
+    const context = useContext(ThemeContext);
+    // If context is available, return it; otherwise return default
+    return context || defaultReturn;
+  } catch (error) {
+    // If useContext fails (during SSR), return default
+    return defaultReturn;
+  }
 };
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
