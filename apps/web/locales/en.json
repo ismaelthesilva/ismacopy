@@ -145,88 +145,143 @@
     }
   },
   "about": {
-    "badge": "👋 About ismaCopy",
+    "badge": "About ismaCopy",
     "hero": {
-      "title": "From Speaker to",
-      "titleHighlight": "Code & Copy",
-      "description": "The journey of transforming ideas into impactful code and compelling content that drives real business results."
+      "title": "From Motivational Speaker to",
+      "titleHighlight": "Digital Solutions Expert",
+      "description": "My journey from earning $100K+ as a motivational speaker to mastering fullstack development and conversion copywriting."
     },
     "journey": {
-      "title": "The Founder's Journey",
-      "subtitle": "From motivational speaking to digital transformation",
+      "title": "The Journey",
+      "subtitle": "From stage to screen: How I transformed challenges into expertise",
       "steps": {
         "beginning": {
           "title": "The Beginning",
-          "period": "2008-2020",
-          "description": "Started as a motivational speaker, inspiring companies with talks on motivation, wellbeing, family values, and soft skills. Built a successful speaking business generating over $100K annually."
+          "period": "2018-2020",
+          "description": "Started as a motivational speaker in New Zealand, earning $100K+ annually through powerful presentations and workshops."
         },
         "pivot": {
-          "title": "The Pivot",
+          "title": "The Pivot", 
           "period": "2020-2021",
-          "description": "During the pandemic, pivoted sales expertise into digital marketing and copywriting. Discovered the power of words in the digital space and fell in love with JavaScript development."
+          "description": "COVID-19 changed everything. Venues closed, speaking gigs vanished. I had to reinvent myself in the digital world."
         },
         "evolution": {
           "title": "The Evolution",
           "period": "2021-2023",
-          "description": "Mastered fullstack JavaScript development while creating online courses for both low-ticket and high-ticket audiences. Combined technical skills with conversion-focused copywriting."
+          "description": "Mastered JavaScript, React, Node.js, and copywriting. The same skills that made me successful on stage now drive digital success."
         },
         "ismaCopy": {
           "title": "ismaCopy Born",
-          "period": "2023-Present",
-          "description": "Founded ismaCopy to provide small and medium companies with everything they need to reach their online audiences effectively. Blending code and copy for maximum impact."
+          "period": "2024-Present", 
+          "description": "Combined development expertise with persuasive writing skills to create high-converting digital solutions for businesses."
         }
       }
     },
     "personal": {
       "name": "Ismael Silva",
-      "title": "Founder, Copywriter & Lead Developer",
+      "title": "Founder & Full Stack Developer",
       "story": {
-        "paragraph1": "My journey began in the world of motivational speaking, where I discovered the power of words to inspire and transform. For years, I traveled to companies across different industries, delivering talks on motivation, wellbeing, family values, and soft skills. This work taught me how to connect with audiences and drive meaningful change.",
-        "paragraph2": "Building a successful speaking business that generated over $100K annually was incredible, but 2020 changed everything. When COVID-19 hit, I had to reinvent myself completely. That's when I discovered the digital world wasn't just the future—it was the present.",
-        "paragraph3": "I channeled my sales expertise into copywriting and digital marketing, while simultaneously falling in love with JavaScript development. The same principles that made me successful as a speaker—understanding audiences, crafting compelling narratives, and driving action—translated perfectly to the digital space.",
-        "paragraph4": "Today, ismaCopy represents the evolution of that journey. We don't just build websites or write copy—we create complete digital experiences that transform how small and medium companies connect with their online audiences. Every line of code and every word we write is designed to perform and inspire."
+        "paragraph1": "Before COVID-19, I was living the dream as a motivational speaker in New Zealand, earning over $100,000 annually. I traveled across the country, speaking to packed auditoriums, helping people transform their mindsets and achieve their goals. The stage was my world, and I was thriving.",
+        "paragraph2": "Then March 2020 happened. Overnight, speaking events were cancelled. Venues closed. The industry I had mastered suddenly disappeared. Like millions of others, I faced an uncertain future. But instead of seeing it as an end, I saw it as a beginning.",
+        "paragraph3": "I threw myself into learning JavaScript, React, Node.js, and TypeScript. The same discipline and communication skills that made me successful on stage became my secret weapons in the digital world. I discovered that persuasive speaking and effective coding aren't so different – both require clarity, logic, and the ability to solve problems.",
+        "paragraph4": "Today, ismaCopy combines my speaking background with cutting-edge development skills. I create digital solutions that don't just function – they persuade, convert, and grow businesses. From New Zealand stages to global screens, the mission remains the same: helping others succeed."
       }
     },
     "services": {
-      "title": "What We Deliver",
-      "subtitle": "Comprehensive solutions that blend technical excellence with strategic communication",
+      "title": "What I Do",
+      "subtitle": "Combining technical excellence with persuasive communication",
       "development": {
         "title": "Fullstack Development",
-        "description": "React, Node.js, TypeScript, Supabase, Vercel - building fast, responsive, and scalable web applications.",
-        "features": ["Modern JavaScript Stack", "API Integration", "Performance Optimization", "Responsive Design"]
+        "description": "Modern web applications built with React, Next.js, and Node.js that perform exceptionally and scale effortlessly.",
+        "features": ["React & Next.js Applications", "Backend APIs & Databases", "Responsive Design", "Performance Optimization", "TypeScript Development", "Cloud Deployment"]
       },
       "copywriting": {
-        "title": "Conversion Copywriting",
-        "description": "Strategic messaging that speaks to your audience and drives action across all digital platforms.",
-        "features": ["Landing Pages", "Email Sequences", "SEO Content", "Sales Funnels"]
+        "title": "Conversion Copywriting", 
+        "description": "Strategic messaging that turns visitors into customers, combining psychological triggers with clear communication.",
+        "features": ["Sales Page Copy", "Email Sequences", "Landing Page Optimization", "Brand Voice Development", "A/B Testing", "Conversion Strategy"]
       },
       "strategy": {
         "title": "Digital Strategy",
-        "description": "Comprehensive digital marketing solutions that combine technical excellence with compelling storytelling.",
-        "features": ["Cross-Industry Experience", "Performance-Oriented", "Global Perspective", "Measurable Results"]
+        "description": "Complete digital solutions that align technology with business goals for measurable growth and success.",
+        "features": ["Digital Transformation", "Growth Strategy", "Analytics & Tracking", "User Experience Design", "Marketing Automation", "Performance Analysis"]
       }
     },
     "values": {
-      "title": "Our Values",
-      "subtitle": "What drives us to deliver exceptional results",
+      "title": "Core Values",
+      "subtitle": "What drives every project and partnership",
       "clientFocused": {
         "title": "Client-Focused",
-        "description": "Every project starts with understanding your goals and ends with exceeding your expectations."
+        "description": "Every solution is tailored to your specific needs, goals, and audience. Your success is the only metric that matters."
       },
       "globalMindset": {
         "title": "Global Mindset",
-        "description": "Experience across New Zealand, Brazil, and the U.S. brings multicultural perspective to every project."
+        "description": "Experience across New Zealand, Brazil, and the US brings diverse perspectives to every project."
       },
       "innovation": {
         "title": "Innovation",
-        "description": "Always working with the latest tools and technologies to deliver cutting-edge solutions."
+        "description": "Staying ahead with the latest technologies and strategies to give you a competitive advantage."
       }
     },
     "cta": {
-      "title": "Ready to Transform Your Digital Presence?",
-      "description": "Let's build something that performs and inspires. Whether you need code that powers your platform or copy that powers your message, we're ready to deliver high-impact results.",
-      "strategyCall": "Get Your Free Strategy Call",
+      "title": "Ready to Transform Your Business?",
+      "description": "Let's discuss how we can create digital solutions that drive real results for your business.",
+      "strategyCall": "Book Strategy Call",
       "portfolio": "View Our Portfolio"
+    }
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "subtitle": "Complete digital marketing solutions that drive results",
+    "badge": "Proven Results • 100+ Projects • $1M+ Client Revenue",
+    "description": "Your website should be your best salesperson. If it's not converting visitors into customers, you're bleeding money every single day.",
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Let's discuss your project and create a custom solution that drives results.",
+      "button": "Get Your Free Strategy Call"
+    }
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Real projects, real results",
+    "badge": "Success Stories",
+    "description": "See how we've helped businesses like yours achieve extraordinary growth through strategic digital marketing.",
+    "categories": {
+      "all": "All Projects",
+      "copywriting": "Copywriting",
+      "development": "Web Development",
+      "marketing": "Digital Marketing",
+      "video": "Video Production"
+    },
+    "cta": {
+      "title": "Ready to Be Our Next Success Story?",
+      "description": "Join our portfolio of successful businesses that have transformed their results.",
+      "button": "Start Your Project"
+    }
+  },
+  "investments": {
+    "title": "Investment Dashboard",
+    "subtitle": "Track your portfolio performance",
+    "badge": "Client Portal",
+    "welcome": "Welcome to your investment dashboard",
+    "overview": "Portfolio Overview",
+    "stats": {
+      "totalValue": "Total Portfolio Value",
+      "monthlyReturn": "Monthly Return",
+      "yearlyReturn": "Annual Return",
+      "totalGain": "Total Gain/Loss"
+    },
+    "sections": {
+      "stocks": "Stocks",
+      "bonds": "Bonds",
+      "etfs": "ETFs",
+      "crypto": "Cryptocurrency",
+      "real-estate": "Real Estate"
+    },
+    "actions": {
+      "buy": "Buy",
+      "sell": "Sell",
+      "viewDetails": "View Details",
+      "addToWatchlist": "Add to Watchlist"
     }
   },
   "language": "Language",

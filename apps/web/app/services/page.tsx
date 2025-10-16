@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const services = [
   {
@@ -154,6 +155,8 @@ const guarantees = [
 ];
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
@@ -162,21 +165,18 @@ export default function Services() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 px-6 py-3 rounded-full mb-8">
               <Star className="h-5 w-5 text-blue-600" />
-              <span className="font-semibold text-blue-600">Proven Results • 100+ Projects • $1M+ Client Revenue</span>
+              <span className="font-semibold text-blue-600">{t('servicesPage.badge')}</span>
               <Star className="h-5 w-5 text-blue-600" />
             </div>
             
             <h1 className="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Stop Losing
+                {t('servicesPage.title')}
               </span>
-              <br />
-              <span className="text-slate-900">Money Every Day</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Your website should be your <strong className="text-slate-900">best salesperson</strong>. 
-              If it's not converting visitors into customers, you're bleeding money every single day.
+              {t('servicesPage.description')}
             </p>
             
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl max-w-4xl mx-auto mb-12">
@@ -472,7 +472,7 @@ export default function Services() {
               <Link href="/contact">
                 <Button className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-6 text-2xl font-bold rounded-full shadow-2xl">
                   <MessageSquare className="mr-3 h-7 w-7" />
-                  Get Your Free Strategy Call
+                  {t('servicesPage.cta.button')}
                 </Button>
               </Link>
               

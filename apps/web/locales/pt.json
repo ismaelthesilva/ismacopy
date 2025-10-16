@@ -145,88 +145,143 @@
     }
   },
   "about": {
-    "badge": "👋 Sobre a ismaCopy",
+    "badge": "Sobre a ismaCopy",
     "hero": {
-      "title": "De Palestrante a",
-      "titleHighlight": "Código & Copy",
-      "description": "A jornada de transformar ideias em código impactante e conteúdo persuasivo que gera resultados reais para negócios."
+      "title": "De Palestrante Motivacional a",
+      "titleHighlight": "Especialista em Soluções Digitais",
+      "description": "Minha jornada de ganhar mais de $100K como palestrante motivacional para dominar desenvolvimento fullstack e copywriting de conversão."
     },
     "journey": {
-      "title": "A Jornada do Fundador",
-      "subtitle": "De palestras motivacionais à transformação digital",
+      "title": "A Jornada",
+      "subtitle": "Do palco à tela: Como transformei desafios em expertise",
       "steps": {
         "beginning": {
-          "title": "O Início",
-          "period": "2008-2020",
-          "description": "Comecei como palestrante motivacional, inspirando empresas com palestras sobre motivação, bem-estar, valores familiares e soft skills. Construí um negócio de palestras de sucesso que gerava mais de $100K anuais."
+          "title": "O Começo",
+          "period": "2018-2020",
+          "description": "Comecei como palestrante motivacional na Nova Zelândia, ganhando mais de $100K anuais através de apresentações e workshops poderosos."
         },
         "pivot": {
-          "title": "A Virada",
+          "title": "A Mudança",
           "period": "2020-2021",
-          "description": "Durante a pandemia, direcionei minha expertise em vendas para marketing digital e copywriting. Descobri o poder das palavras no espaço digital e me apaixonei pelo desenvolvimento JavaScript."
+          "description": "COVID-19 mudou tudo. Locais fecharam, palestras desapareceram. Tive que me reinventar no mundo digital."
         },
         "evolution": {
           "title": "A Evolução",
           "period": "2021-2023",
-          "description": "Dominei o desenvolvimento fullstack JavaScript enquanto criava cursos online para audiências de baixo e alto ticket. Combinei habilidades técnicas com copywriting focado em conversão."
+          "description": "Dominei JavaScript, React, Node.js e copywriting. As mesmas habilidades que me fizeram bem-sucedido no palco agora impulsionam o sucesso digital."
         },
         "ismaCopy": {
           "title": "ismaCopy Nasce",
-          "period": "2023-Presente",
-          "description": "Fundei a ismaCopy para fornecer a pequenas e médias empresas tudo o que precisam para alcançar suas audiências online de forma eficaz. Unindo código e copy para máximo impacto."
+          "period": "2024-Presente",
+          "description": "Combinei expertise em desenvolvimento com habilidades de escrita persuasiva para criar soluções digitais de alta conversão para empresas."
         }
       }
     },
     "personal": {
       "name": "Ismael Silva",
-      "title": "Fundador, Copywriter & Desenvolvedor Líder",
+      "title": "Fundador & Desenvolvedor Full Stack",
       "story": {
-        "paragraph1": "Minha jornada começou no mundo das palestras motivacionais, onde descobri o poder das palavras para inspirar e transformar. Por anos, viajei para empresas de diferentes setores, realizando palestras sobre motivação, bem-estar, valores familiares e soft skills. Este trabalho me ensinou como conectar com audiências e gerar mudanças significativas.",
-        "paragraph2": "Construir um negócio de palestras de sucesso que gerava mais de $100K anuais foi incrível, mas 2020 mudou tudo. Quando a COVID-19 chegou, tive que me reinventar completamente. Foi quando descobri que o mundo digital não era apenas o futuro—era o presente.",
-        "paragraph3": "Canalizei minha expertise em vendas para copywriting e marketing digital, enquanto simultaneamente me apaixonava pelo desenvolvimento JavaScript. Os mesmos princípios que me tornaram bem-sucedido como palestrante—entender audiências, criar narrativas convincentes e gerar ação—se traduziram perfeitamente para o espaço digital.",
-        "paragraph4": "Hoje, a ismaCopy representa a evolução dessa jornada. Não apenas construímos sites ou escrevemos copy—criamos experiências digitais completas que transformam como pequenas e médias empresas se conectam com suas audiências online. Cada linha de código e cada palavra que escrevemos é projetada para performar e inspirar."
+        "paragraph1": "Antes da COVID-19, eu estava vivendo o sonho como palestrante motivacional na Nova Zelândia, ganhando mais de $100.000 anuais. Viajava pelo país, falando para auditórios lotados, ajudando pessoas a transformar suas mentalidades e alcançar seus objetivos. O palco era meu mundo, e eu estava prosperando.",
+        "paragraph2": "Então março de 2020 aconteceu. Da noite para o dia, eventos de palestras foram cancelados. Locais fecharam. A indústria que eu havia dominado de repente desapareceu. Como milhões de outros, enfrentei um futuro incerto. Mas ao invés de ver como um fim, vi como um começo.",
+        "paragraph3": "Me dediquei a aprender JavaScript, React, Node.js e TypeScript. A mesma disciplina e habilidades de comunicação que me fizeram bem-sucedido no palco se tornaram minhas armas secretas no mundo digital. Descobri que falar de forma persuasiva e programar efetivamente não são tão diferentes – ambos requerem clareza, lógica e a capacidade de resolver problemas.",
+        "paragraph4": "Hoje, a ismaCopy combina minha experiência como palestrante com habilidades de desenvolvimento de ponta. Crio soluções digitais que não apenas funcionam – elas persuadem, convertem e fazem empresas crescer. Dos palcos da Nova Zelândia às telas globais, a missão permanece a mesma: ajudar outros a ter sucesso."
       }
     },
     "services": {
-      "title": "O Que Entregamos",
-      "subtitle": "Soluções abrangentes que combinam excelência técnica com comunicação estratégica",
+      "title": "O Que Faço",
+      "subtitle": "Combinando excelência técnica com comunicação persuasiva",
       "development": {
         "title": "Desenvolvimento Fullstack",
-        "description": "React, Node.js, TypeScript, Supabase, Vercel - construindo aplicações web rápidas, responsivas e escaláveis.",
-        "features": ["Stack JavaScript Moderno", "Integração de APIs", "Otimização de Performance", "Design Responsivo"]
+        "description": "Aplicações web modernas construídas com React, Next.js e Node.js que performam excepcionalmente e escalam sem esforço.",
+        "features": ["Aplicações React & Next.js", "APIs Backend & Bancos de Dados", "Design Responsivo", "Otimização de Performance", "Desenvolvimento TypeScript", "Deploy em Nuvem"]
       },
       "copywriting": {
         "title": "Copywriting de Conversão",
-        "description": "Mensagens estratégicas que falam com sua audiência e geram ação em todas as plataformas digitais.",
-        "features": ["Landing Pages", "Sequências de Email", "Conteúdo SEO", "Funis de Vendas"]
+        "description": "Mensagens estratégicas que transformam visitantes em clientes, combinando gatilhos psicológicos com comunicação clara.",
+        "features": ["Copy para Páginas de Venda", "Sequências de Email", "Otimização de Landing Pages", "Desenvolvimento de Voz da Marca", "Testes A/B", "Estratégia de Conversão"]
       },
       "strategy": {
         "title": "Estratégia Digital",
-        "description": "Soluções abrangentes de marketing digital que combinam excelência técnica com storytelling persuasivo.",
-        "features": ["Experiência Cross-Industry", "Orientado a Performance", "Perspectiva Global", "Resultados Mensuráveis"]
+        "description": "Soluções digitais completas que alinham tecnologia com objetivos de negócio para crescimento mensurável e sucesso.",
+        "features": ["Transformação Digital", "Estratégia de Crescimento", "Analytics & Rastreamento", "Design de Experiência do Usuário", "Automação de Marketing", "Análise de Performance"]
       }
     },
     "values": {
-      "title": "Nossos Valores",
-      "subtitle": "O que nos move a entregar resultados excepcionais",
+      "title": "Valores Fundamentais",
+      "subtitle": "O que impulsiona cada projeto e parceria",
       "clientFocused": {
         "title": "Foco no Cliente",
-        "description": "Cada projeto começa entendendo seus objetivos e termina superando suas expectativas."
+        "description": "Toda solução é personalizada para suas necessidades, objetivos e audiência específicos. Seu sucesso é a única métrica que importa."
       },
       "globalMindset": {
         "title": "Mentalidade Global",
-        "description": "Experiência na Nova Zelândia, Brasil e EUA traz perspectiva multicultural para cada projeto."
+        "description": "Experiência na Nova Zelândia, Brasil e EUA traz perspectivas diversas para cada projeto."
       },
       "innovation": {
         "title": "Inovação",
-        "description": "Sempre trabalhando com as ferramentas e tecnologias mais recentes para entregar soluções de ponta."
+        "description": "Sempre à frente com as últimas tecnologias e estratégias para dar a você uma vantagem competitiva."
       }
     },
     "cta": {
-      "title": "Pronto para Transformar Sua Presença Digital?",
-      "description": "Vamos construir algo que performa e inspira. Seja código que potencializa sua plataforma ou copy que potencializa sua mensagem, estamos prontos para entregar resultados de alto impacto.",
-      "strategyCall": "Agende Sua Consultoria Gratuita",
-      "portfolio": "Veja Nosso Portfolio"
+      "title": "Pronto para Transformar Seu Negócio?",
+      "description": "Vamos discutir como podemos criar soluções digitais que geram resultados reais para seu negócio.",
+      "strategyCall": "Agendar Chamada Estratégica",
+      "portfolio": "Ver Nosso Portfólio"
+    }
+  },
+  "servicesPage": {
+    "title": "Nossos Serviços",
+    "subtitle": "Soluções completas de marketing digital que geram resultados",
+    "badge": "Resultados Comprovados • 100+ Projetos • R$5M+ Receita dos Clientes",
+    "description": "Seu site deveria ser seu melhor vendedor. Se não está convertendo visitantes em clientes, você está perdendo dinheiro todos os dias.",
+    "cta": {
+      "title": "Pronto para Começar?",
+      "description": "Vamos discutir seu projeto e criar uma solução personalizada que gera resultados.",
+      "button": "Agendar Sua Consultoria Gratuita"
+    }
+  },
+  "portfolio": {
+    "title": "Nosso Portfólio",
+    "subtitle": "Projetos reais, resultados reais",
+    "badge": "Casos de Sucesso",
+    "description": "Veja como ajudamos empresas como a sua a alcançar crescimento extraordinário através de marketing digital estratégico.",
+    "categories": {
+      "all": "Todos os Projetos",
+      "copywriting": "Copywriting",
+      "development": "Desenvolvimento Web",
+      "marketing": "Marketing Digital",
+      "video": "Produção de Vídeo"
+    },
+    "cta": {
+      "title": "Pronto para Ser Nosso Próximo Caso de Sucesso?",
+      "description": "Junte-se ao nosso portfólio de empresas bem-sucedidas que transformaram seus resultados.",
+      "button": "Iniciar Seu Projeto"
+    }
+  },
+  "investments": {
+    "title": "Dashboard de Investimentos",
+    "subtitle": "Acompanhe a performance do seu portfólio",
+    "badge": "Portal do Cliente",
+    "welcome": "Bem-vindo ao seu dashboard de investimentos",
+    "overview": "Visão Geral do Portfólio",
+    "stats": {
+      "totalValue": "Valor Total do Portfólio",
+      "monthlyReturn": "Retorno Mensal",
+      "yearlyReturn": "Retorno Anual",
+      "totalGain": "Ganho/Perda Total"
+    },
+    "sections": {
+      "stocks": "Ações",
+      "bonds": "Títulos",
+      "etfs": "ETFs",
+      "crypto": "Criptomoedas",
+      "real-estate": "Imóveis"
+    },
+    "actions": {
+      "buy": "Comprar",
+      "sell": "Vender",
+      "viewDetails": "Ver Detalhes",
+      "addToWatchlist": "Adicionar à Lista"
     }
   },
   "language": "Idioma",

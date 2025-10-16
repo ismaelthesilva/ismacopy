@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
+import { useLanguage } from '../../contexts/LanguageContext';
 import { 
   User,
   TrendingUp,
@@ -24,29 +25,7 @@ import {
 export const dynamic = 'force-dynamic';
 
 export default function About() {
-  // Fallback translation function
-  const t = (key: string, options?: any): any => {
-    const fallbacks: Record<string, any> = {
-      'about.title': 'About Me',
-      'about.subtitle': 'Full-Stack Developer & Copywriter',
-      'about.journey.steps.beginning.title': 'The Beginning',
-      'about.journey.steps.beginning.period': '2020-2021',
-      'about.journey.steps.growth.title': 'Growth Phase',
-      'about.journey.steps.growth.period': '2021-2022',
-      'about.journey.steps.mastery.title': 'Mastery',
-      'about.journey.steps.mastery.period': '2023-Present',
-      'about.services.development.title': 'Web Development',
-      'about.services.development.features': ['React & Next.js', 'Full-Stack Applications', 'Responsive Design'],
-      'about.services.copywriting.title': 'Copywriting',
-      'about.services.copywriting.features': ['Sales Copy', 'Content Strategy', 'Brand Voice'],
-      'about.services.strategy.title': 'Strategy',
-      'about.services.strategy.features': ['Digital Marketing', 'Growth Strategy', 'Analytics'],
-      'about.features': ['Web Development', 'Copywriting', 'UI/UX Design'],
-      'about.skills': ['React', 'Next.js', 'Node.js', 'TypeScript'],
-      'about.values': ['Quality', 'Innovation', 'Reliability']
-    };
-    return fallbacks[key] || key;
-  };
+  const { t } = useLanguage();
 
   const journey = [
     {
@@ -227,7 +206,7 @@ export default function About() {
                   <CardContent className="flex flex-col flex-grow">
                     <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
                     <div className="space-y-2 mt-auto">
-                      {service.features.map((feature: string, featureIndex: number) => (
+                      {Array.isArray(service.features) && service.features.map((feature: string, featureIndex: number) => (
                         <div key={featureIndex} className="flex items-center text-sm text-slate-600">
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -243,7 +222,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="pt-4 pb-16">
+      <section className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">

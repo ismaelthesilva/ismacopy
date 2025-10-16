@@ -15,30 +15,13 @@ import {
   CheckCircle,
   Send
 } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Safely use language context with fallback
-  let t = (key: string): any => {
-    // Provide sensible fallbacks for known keys
-    const fallbacks: Record<string, any> = {
-      'contact.title': 'Get in Touch',
-      'contact.subtitle': 'Let\'s discuss your next project',
-      'contact.features': ['Professional Service', 'Quick Response', 'Expert Support'],
-      'contact.form.name': 'Name',
-      'contact.form.email': 'Email',
-      'contact.form.message': 'Message',
-      'contact.form.submit': 'Send Message',
-      'contact.info.email': 'contact@ismaelsilva.dev',
-      'contact.info.phone': '+1 (555) 123-4567'
-    };
-    
-    return fallbacks[key] || key;
-  };
-  
-  // Note: Language context not available in current setup
-  // Using fallback translations defined above
+  // Import the language context
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

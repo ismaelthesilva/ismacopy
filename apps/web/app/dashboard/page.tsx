@@ -16,8 +16,10 @@ import {
   BarChart3,
   ArrowRight
 } from 'lucide-react'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function Dashboard() {
+  const { t } = useLanguage()
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [etfs, setEtfs] = useState<InvestmentData[]>([])
