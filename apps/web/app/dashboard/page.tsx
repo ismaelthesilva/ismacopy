@@ -76,7 +76,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
-      <header className="bg-white/70 backdrop-blur-sm border-b border-slate-200">
+      <header className="bg-background/70 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -92,7 +92,7 @@ export default function Dashboard() {
       <main className="container mx-auto px-4 py-8">
         {/* Overview Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Portfolio Value</CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
@@ -105,7 +105,7 @@ export default function Dashboard() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Average Performance</CardTitle>
               {avgPerformance >= 0 ? (
@@ -124,7 +124,7 @@ export default function Dashboard() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Investment Categories</CardTitle>
               <PieChart className="h-4 w-4 text-muted-foreground" />
@@ -143,7 +143,7 @@ export default function Dashboard() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Financial Performance Metrics</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+            <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-lg text-slate-900">Quick Overview</CardTitle>
                 <CardDescription>Key financial metrics from major investments</CardDescription>
@@ -162,7 +162,7 @@ export default function Dashboard() {
               </CardContent>
             </Card>
             
-            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+            <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-lg text-slate-900">Data Coverage</CardTitle>
                 <CardDescription>5-year financial history (2019-2023)</CardDescription>
@@ -191,7 +191,7 @@ export default function Dashboard() {
           </div>
           
           {/* Brazilian Stocks */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-6">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm mb-6">
             <CardHeader>
               <CardTitle className="text-xl text-slate-900">Brazilian Stocks - Financial Data (2019-2023)</CardTitle>
               <CardDescription>Receita Líquida, Lucro Líquido, ROE, Margem Líquida, Dívida Líquida, EBITDA</CardDescription>
@@ -249,7 +249,7 @@ export default function Dashboard() {
           </Card>
 
           {/* US Stocks */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-6">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm mb-6">
             <CardHeader>
               <CardTitle className="text-xl text-slate-900">US Stocks - Financial Data (2019-2023)</CardTitle>
               <CardDescription>Net Revenue, Net Income, ROE, Net Margin, Net Debt, EBITDA</CardDescription>
@@ -310,7 +310,7 @@ export default function Dashboard() {
         {/* Category Navigation */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           {/* Global Investments */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
@@ -335,7 +335,7 @@ export default function Dashboard() {
           </Card>
 
           {/* ETFs */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
@@ -360,7 +360,7 @@ export default function Dashboard() {
           </Card>
 
           {/* Stocks */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
@@ -385,7 +385,7 @@ export default function Dashboard() {
           </Card>
 
           {/* Bonds */}
-          <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+          <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>

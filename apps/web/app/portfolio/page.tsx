@@ -17,7 +17,7 @@ const portfolioPages = [
   {
     name: "BJJ Champ Platform",
     url: "https://bjjchamp.net",
-    image: "/images/bjjChampHome.png",
+    image: "/images/bjjchampHome.png", 
     category: "Full-Stack Web Application",
     description: "Complete Brazilian Jiu-Jitsu ecosystem with athlete profiles, competition tracking, and fan engagement. Built for scalability with 10K+ monthly active users.",
     technologies: ['React', 'Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
@@ -113,7 +113,7 @@ export default function Portfolio() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto py-12 px-4 md:px-0">
         {/* Hero Section */}
         <div className="text-center mb-16">

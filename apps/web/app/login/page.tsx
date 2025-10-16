@@ -79,50 +79,50 @@ export default function LoginPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <TrendingUp className="h-6 w-6 text-blue-600" />
+            <div className="flex items-center space-x-3 p-4 bg-card/70 backdrop-blur-sm rounded-lg border border-border">
+              <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                <TrendingUp className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <h3 className="font-semibold">Performance Tracking</h3>
-                <p className="text-sm text-gray-600">5-year historical data</p>
+                <h3 className="font-semibold text-foreground">Performance Tracking</h3>
+                <p className="text-sm text-muted-foreground">5-year historical data</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border">
-              <div className="p-2 bg-green-100 rounded-lg">
-                <DollarSign className="h-6 w-6 text-green-600" />
+            <div className="flex items-center space-x-3 p-4 bg-card/70 backdrop-blur-sm rounded-lg border border-border">
+              <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                <DollarSign className="h-6 w-6 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h3 className="font-semibold">Multi-Currency</h3>
-                <p className="text-sm text-gray-600">USD & BRL support</p>
+                <h3 className="font-semibold text-foreground">Multi-Currency</h3>
+                <p className="text-sm text-muted-foreground">USD & BRL support</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <Globe className="h-6 w-6 text-purple-600" />
+            <div className="flex items-center space-x-3 p-4 bg-card/70 backdrop-blur-sm rounded-lg border border-border">
+              <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                <Globe className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
               <div>
-                <h3 className="font-semibold">Global Markets</h3>
-                <p className="text-sm text-gray-600">62 investments total</p>
+                <h3 className="font-semibold text-foreground">Global Markets</h3>
+                <p className="text-sm text-muted-foreground">62 investments total</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border">
-              <div className="p-2 bg-orange-100 rounded-lg">
-                <div className="h-6 w-6 text-orange-600 font-bold text-lg">8</div>
+            <div className="flex items-center space-x-3 p-4 bg-card/70 backdrop-blur-sm rounded-lg border border-border">
+              <div className="p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
+                <div className="h-6 w-6 text-orange-600 dark:text-orange-400 font-bold text-lg">8</div>
               </div>
               <div>
-                <h3 className="font-semibold">Asset Classes</h3>
-                <p className="text-sm text-gray-600">ETFs, Stocks, Bonds, REITs</p>
+                <h3 className="font-semibold text-foreground">Asset Classes</h3>
+                <p className="text-sm text-muted-foreground">ETFs, Stocks, Bonds, REITs</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Right Side - Login Form */}
-        <Card className="w-full max-w-md mx-auto shadow-2xl border-0 bg-white/80 backdrop-blur-sm">
+        <Card className="w-full max-w-md mx-auto shadow-2xl border border-border bg-card/80 backdrop-blur-sm">
           <CardHeader className="text-center space-y-2">
             <CardTitle className="text-2xl font-bold">
               {isLogin ? 'Welcome Back' : 'Create Account'}

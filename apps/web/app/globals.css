@@ -123,4 +123,20 @@
   .theme-transition {
     @apply transition-colors duration-300 ease-in-out;
   }
+  
+  /* Enhanced theme support */
+  .bg-white {
+    @apply bg-background;
+  }
+  
+  /* Card improvements for dark mode */
+  .border-gray-200 {
+    @apply border-border;
+  }
+  .border-slate-200 {
+    @apply border-border;
+  }
+  .border-slate-300 {
+    @apply border-border;
+  }
 }

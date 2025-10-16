@@ -134,7 +134,7 @@ export default function Techniques() {
                 {/* Category Header */}
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-4">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 bg-background border border-border rounded-full flex items-center justify-center shadow-lg">
                       {category.icon}
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export default function Techniques() {
                 {/* Techniques Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.techniques.map((technique, techniqueIndex) => (
-                    <Card key={techniqueIndex} className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 group">
+                    <Card key={techniqueIndex} className="border border-border shadow-xl bg-card/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 group">
                       <CardHeader className="text-center pb-4">
                         <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:bg-blue-100 transition-colors duration-200">
                           {technique.icon}
@@ -167,7 +167,7 @@ export default function Techniques() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+            <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
               <CardContent className="p-8 md:p-12">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold text-slate-900 mb-4">Why These Techniques Work</h2>
@@ -216,10 +216,10 @@ export default function Techniques() {
                   Let's implement these proven strategies to transform your business results
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
+                  <Button size="lg" variant="secondary" className="bg-background text-blue-600 hover:bg-accent">
                     Schedule Strategy Call
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     View Case Studies
                   </Button>
                 </div>

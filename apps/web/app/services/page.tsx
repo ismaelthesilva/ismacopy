@@ -158,7 +158,7 @@ export default function Services() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="pt-20 pb-16">
         <div className="container mx-auto px-4">
@@ -247,7 +247,7 @@ export default function Services() {
             {services.map((service, index) => (
               <Card key={index} className="bg-white/80 backdrop-blur-sm shadow-2xl border-0 hover:shadow-3xl transition-all duration-300 hover:-translate-y-2">
                 <CardHeader className="text-center pb-6">
-                  <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl w-fit">
+                  <div className="mx-auto mb-6 p-4 bg-muted rounded-2xl w-fit">
                     {service.icon}
                   </div>
                   <CardTitle className="text-2xl font-bold text-slate-900 mb-2">

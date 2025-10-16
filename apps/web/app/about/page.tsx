@@ -94,7 +94,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-background">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16">

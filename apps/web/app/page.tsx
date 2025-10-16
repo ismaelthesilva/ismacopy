@@ -108,7 +108,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-background text-foreground" suppressHydrationWarning={true}>
+    <div className="min-h-screen bg-background text-foreground" suppressHydrationWarning={true}>
       {/* Hero Section */}
       {/* Hero Section - Keep same purple gradient for both modes */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16" suppressHydrationWarning={true}>
             <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
@@ -199,7 +199,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white dark:bg-slate-800/50 backdrop-blur-sm border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl dark:hover:shadow-2xl hover:shadow-blue-100 dark:hover:shadow-blue-500/10">
+              <Card key={index} className="bg-card border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg text-white">
@@ -246,7 +246,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {technologies.map((tech, index) => (
-              <Card key={index} className="text-center bg-white dark:bg-slate-700/50 backdrop-blur-sm border-gray-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-100 dark:hover:shadow-purple-500/10">
+              <Card key={index} className="text-center bg-card border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="pb-2">
                   <div className="text-4xl mb-2">{tech.icon}</div>
                   <CardTitle className="text-lg text-gray-900 dark:text-white">{tech.name}</CardTitle>
