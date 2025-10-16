@@ -79,3 +79,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Dark mode improvements */
+  .text-slate-900 {
+    @apply text-foreground;
+  }
+  .text-slate-800 {
+    @apply text-foreground;
+  }
+  .text-slate-700 {
+    @apply text-foreground;
+  }
+  .text-slate-600 {
+    @apply text-muted-foreground;
+  }
+  .text-gray-900 {
+    @apply text-foreground;
+  }
+  .text-gray-800 {
+    @apply text-foreground;
+  }
+  .text-gray-700 {
+    @apply text-foreground;
+  }
+  .text-gray-600 {
+    @apply text-muted-foreground;
+  }
+  .bg-slate-100 {
+    @apply bg-muted;
+  }
+  .bg-slate-50 {
+    @apply bg-muted/50;
+  }
+  .bg-gray-50 {
+    @apply bg-muted/50;
+  }
+  .bg-gray-100 {
+    @apply bg-muted;
+  }
+  
+  /* Theme toggle animation */
+  .theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}

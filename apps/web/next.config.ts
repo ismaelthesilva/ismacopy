@@ -8,7 +8,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   skipTrailingSlashRedirect: true,
-  serverExternalPackages: []
+  serverExternalPackages: [],
+  // Remove experimental.forceSwcTransforms for Turbopack compatibility
+  // Remove invalid generateStaticParams property
 };
 
 export default nextConfig;

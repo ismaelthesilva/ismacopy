@@ -147,7 +147,7 @@ export default function Home() {
             </div>
 
             {/* Social Proof */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-300" suppressHydrationWarning={true}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-300 dark:text-gray-400" suppressHydrationWarning={true}>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-blue-400" />
                 <span>500+ {isClient ? t('hero.socialProof.clients') : 'Happy Clients'}</span>
@@ -166,14 +166,14 @@ export default function Home() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-12 bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
+      <section className="py-12 bg-muted/50 border-b border-border">
         <div className="container mx-auto px-4">
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8 font-medium" suppressHydrationWarning={true}>
+          <p className="text-center text-muted-foreground mb-8 font-medium" suppressHydrationWarning={true}>
             {isClient ? t('clients.title') : 'Trusted by leading companies'}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {clients.map((client, index) => (
-              <div key={index} className="flex items-center gap-2 text-2xl font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+              <div key={index} className="flex items-center gap-2 text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors">
                 <span className="text-3xl">{client.logo}</span>
                 <span>{client.name}</span>
               </div>

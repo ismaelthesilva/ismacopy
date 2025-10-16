@@ -20,8 +20,18 @@ import { useLanguage } from '../../contexts/LanguageContext';
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Import the language context
+  // Import the language context with SSR safety
   const { t } = useLanguage();
+  
+  // Helper function for safe translation access
+  const safeT = (key: string, fallback: any = '') => {
+    try {
+      const result = t(key);
+      return result !== key ? result : fallback;
+    } catch {
+      return fallback;
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -187,12 +197,26 @@ export default function Contact() {
                 <CardContent className="pt-6">
                   <h3 className="font-bold text-slate-900 mb-4">Why Choose Us?</h3>
                   <div className="space-y-3">
-                    {t('contact.features').map((feature: string, index: number) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span className="text-sm text-slate-600">{feature}</span>
-                      </div>
-                    ))}
+                    {(() => {
+                      const features = safeT('contact.features', [
+                        'Free initial consultation',
+                        'Custom strategy development',
+                        'Fast response guaranteed',
+                        'Transparent pricing'
+                      ]);
+                      const featureArray = Array.isArray(features) ? features : [
+                        'Free initial consultation',
+                        'Custom strategy development',
+                        'Fast response guaranteed',
+                        'Transparent pricing'
+                      ];
+                      return featureArray.map((feature: string, index: number) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <CheckCircle className="h-4 w-4 text-green-500" />
+                          <span className="text-sm text-slate-600">{feature}</span>
+                        </div>
+                      ));
+                    })()}
                   </div>
                 </CardContent>
               </Card>

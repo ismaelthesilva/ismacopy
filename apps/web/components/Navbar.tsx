@@ -14,6 +14,7 @@ import {
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import LoginModal from './auth/LoginModal';
+import ThemeToggle from './ThemeToggle';
 import { 
   Moon, 
   Sun, 
@@ -109,19 +110,7 @@ const Navbar = () => {
             </DropdownMenu>
 
             {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="h-8 w-8 px-0"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-              <span className="sr-only">{t('theme') || 'Theme'}</span>
-            </Button>
+            <ThemeToggle />
 
             {/* Login Modal */}
             <LoginModal />
