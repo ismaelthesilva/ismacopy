@@ -18,7 +18,7 @@ const ThankYouPage = () => {
           </p>
         </div>
       </div>
-      <footer className="bg-white text-center py-4 mt-5 border-t">
+      <footer className="bg-background text-center py-4 mt-5 border-t">
         <div className="container mx-auto px-4">
           <p className="text-gray-600">
             Qualquer dúvida, entre em contato com nosso suporte.

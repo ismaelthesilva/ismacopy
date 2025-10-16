@@ -128,6 +128,18 @@
   .bg-white {
     @apply bg-background;
   }
+  .bg-white\/50 {
+    @apply bg-background/50;
+  }
+  .bg-white\/70 {
+    @apply bg-card/70;
+  }
+  .bg-white\/80 {
+    @apply bg-card/80;
+  }
+  .bg-white\/90 {
+    @apply bg-card/90;
+  }
   
   /* Card improvements for dark mode */
   .border-gray-200 {

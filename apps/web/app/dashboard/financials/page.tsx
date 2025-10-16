@@ -57,7 +57,7 @@ export default function FinancialAnalysisPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
-      <header className="bg-white/70 backdrop-blur-sm border-b border-slate-200">
+      <header className="bg-card/70 backdrop-blur-sm border border-border border-b border-border">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div>
@@ -75,7 +75,7 @@ export default function FinancialAnalysisPage() {
       <main className="container mx-auto px-4 py-8">
         
         {/* Brazilian Stocks Analysis */}
-        <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-8">
+        <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border mb-8">
           <CardHeader>
             <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
               <BarChart3 className="h-6 w-6 text-green-600" />
@@ -89,7 +89,7 @@ export default function FinancialAnalysisPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b-2 border-slate-200">
+                  <tr className="border-b-2 border-border">
                     <th className="text-left p-3 font-semibold">Symbol</th>
                     <th className="text-left p-3 font-semibold">Company</th>
                     <th className="text-left p-3 font-semibold">Revenue 2023 (M)</th>
@@ -126,7 +126,7 @@ export default function FinancialAnalysisPage() {
         </Card>
 
         {/* US Stocks Analysis */}
-        <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-8">
+        <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border mb-8">
           <CardHeader>
             <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
               <TrendingUp className="h-6 w-6 text-blue-600" />
@@ -140,7 +140,7 @@ export default function FinancialAnalysisPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b-2 border-slate-200">
+                  <tr className="border-b-2 border-border">
                     <th className="text-left p-3 font-semibold">Symbol</th>
                     <th className="text-left p-3 font-semibold">Company</th>
                     <th className="text-left p-3 font-semibold">Revenue 2023 (B)</th>
@@ -177,7 +177,7 @@ export default function FinancialAnalysisPage() {
         </Card>
 
         {/* Brazilian FIIs Analysis */}
-        <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm mb-8">
+        <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border mb-8">
           <CardHeader>
             <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
               <DollarSign className="h-6 w-6 text-purple-600" />
@@ -191,7 +191,7 @@ export default function FinancialAnalysisPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b-2 border-slate-200">
+                  <tr className="border-b-2 border-border">
                     <th className="text-left p-3 font-semibold">Symbol</th>
                     <th className="text-left p-3 font-semibold">Fund Name</th>
                     <th className="text-left p-3 font-semibold">Revenue 2023 (M)</th>

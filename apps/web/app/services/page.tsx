@@ -175,12 +175,12 @@ export default function Services() {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
               {t('servicesPage.description')}
             </p>
             
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl max-w-4xl mx-auto mb-12">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+            <div className="bg-card/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl max-w-4xl mx-auto mb-12 border border-border">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
                 🚨 Is Your Business Suffering From These Profit Killers?
               </h2>
               <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -222,7 +222,7 @@ export default function Services() {
                   Stop The Bleeding - Get Started Today
                 </Button>
               </Link>
-              <p className="text-sm text-slate-500">
+              <p className="text-sm text-muted-foreground">
                 ⚡ Free consultation • No obligations • Results guaranteed
               </p>
             </div>
@@ -231,13 +231,13 @@ export default function Services() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white/50">
+      <section className="py-20 bg-input">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Services That Actually <span className="text-blue-600">Make You Money</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Each service is designed with one goal: <strong>Maximize your ROI</strong>. 
               No fluff, no filler—just proven strategies that put money in your pocket.
             </p>
@@ -245,18 +245,18 @@ export default function Services() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white/80 backdrop-blur-sm shadow-2xl border-0 hover:shadow-3xl transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="bg-card/80 backdrop-blur-sm border border-border shadow-2xl border-0 hover:shadow-3xl transition-all duration-300 hover:-translate-y-2">
                 <CardHeader className="text-center pb-6">
                   <div className="mx-auto mb-6 p-4 bg-muted rounded-2xl w-fit">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-slate-900 mb-2">
+                  <CardTitle className="text-2xl font-bold text-foreground mb-2">
                     {service.title}
                   </CardTitle>
                   <p className="text-lg font-semibold text-blue-600 mb-4">
                     {service.subtitle}
                   </p>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardHeader>
@@ -264,12 +264,12 @@ export default function Services() {
                 <CardContent className="space-y-8">
                   {/* Features */}
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-4">What You Get:</h4>
+                    <h4 className="font-bold text-foreground mb-4">What You Get:</h4>
                     <div className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-3">
                           <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                          <span className="text-slate-700">{feature}</span>
+                          <span className="text-foreground">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -292,12 +292,12 @@ export default function Services() {
                   <div className="border-t pt-6">
                     <div className="flex justify-between items-center mb-4">
                       <div>
-                        <p className="text-sm text-slate-500">Investment</p>
-                        <p className="text-2xl font-bold text-slate-900">{service.investment}</p>
+                        <p className="text-sm text-muted-foreground">Investment</p>
+                        <p className="text-2xl font-bold text-foreground">{service.investment}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-sm text-slate-500">Timeline</p>
-                        <p className="font-semibold text-slate-700">{service.timeline}</p>
+                        <p className="text-sm text-muted-foreground">Timeline</p>
+                        <p className="font-semibold text-foreground">{service.timeline}</p>
                       </div>
                     </div>
                     
@@ -337,16 +337,16 @@ export default function Services() {
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-white text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  <div className="w-20 h-20 bg-background text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     {step.step}
                   </div>
                   {index < processSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-white/30 -z-10"></div>
+                    <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-background/30 -z-10"></div>
                   )}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-lg opacity-90 mb-4">{step.description}</p>
-                <span className="text-sm bg-white/20 px-4 py-2 rounded-full">
+                <span className="text-sm bg-background/20 px-4 py-2 rounded-full">
                   {step.duration}
                 </span>
               </div>
@@ -356,20 +356,20 @@ export default function Services() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 bg-white/50">
+      <section className="py-20 bg-input">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Real Results from Real Clients
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Don't just take my word for it. Here's what happens when you work with someone who understands both technology and psychology.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white shadow-xl border-0 p-8">
+              <Card key={index} className="bg-card shadow-xl border border-border border-0 p-8">
                 <CardContent className="space-y-6">
                   <div className="flex items-center gap-4">
                     <img 
@@ -378,13 +378,13 @@ export default function Services() {
                       className="w-16 h-16 rounded-full object-cover"
                     />
                     <div>
-                      <h4 className="font-bold text-slate-900">{testimonial.name}</h4>
-                      <p className="text-slate-600">{testimonial.role}</p>
-                      <p className="text-sm text-slate-500">{testimonial.company}</p>
+                      <h4 className="font-bold text-foreground">{testimonial.name}</h4>
+                      <p className="text-muted-foreground">{testimonial.role}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                     </div>
                   </div>
                   
-                  <blockquote className="text-slate-700 italic leading-relaxed">
+                  <blockquote className="text-foreground italic leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   
@@ -401,7 +401,7 @@ export default function Services() {
       </section>
 
       {/* Guarantees Section */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-muted text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -414,9 +414,9 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {guarantees.map((guarantee, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+              <Card key={index} className="bg-background/10 backdrop-blur-sm border-white/20 text-white">
                 <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-4 bg-white/10 rounded-2xl w-fit">
+                  <div className="mx-auto mb-4 p-4 bg-background/10 rounded-2xl w-fit">
                     {guarantee.icon}
                   </div>
                   <CardTitle className="text-xl font-bold mb-4">
@@ -447,7 +447,7 @@ export default function Services() {
               <strong className="block mt-2">Let's change that today.</strong>
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl mb-12">
+            <div className="bg-background/10 backdrop-blur-sm p-8 rounded-2xl mb-12">
               <h3 className="text-2xl font-bold mb-6">🎁 Limited Time Bonus</h3>
               <div className="grid md:grid-cols-3 gap-6 text-lg">
                 <div className="flex items-center gap-3">
@@ -470,7 +470,7 @@ export default function Services() {
 
             <div className="space-y-6">
               <Link href="/contact">
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 px-12 py-6 text-2xl font-bold rounded-full shadow-2xl">
+                <Button className="bg-background text-blue-600 hover:bg-muted/80 px-12 py-6 text-2xl font-bold rounded-full shadow-2xl">
                   <MessageSquare className="mr-3 h-7 w-7" />
                   {t('servicesPage.cta.button')}
                 </Button>

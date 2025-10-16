@@ -80,8 +80,8 @@ export default function Dashboard() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-slate-900">Investment Dashboard</h1>
-              <p className="text-slate-600">Welcome back, {user?.email}</p>
+              <h1 className="text-2xl font-bold text-foreground">Investment Dashboard</h1>
+              <p className="text-muted-foreground">Welcome back, {user?.email}</p>
             </div>
             <AuthButton />
           </div>
@@ -140,16 +140,16 @@ export default function Dashboard() {
 
         {/* Financial Metrics Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Financial Performance Metrics</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Financial Performance Metrics</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-900">Quick Overview</CardTitle>
+                <CardTitle className="text-lg text-foreground">Quick Overview</CardTitle>
                 <CardDescription>Key financial metrics from major investments</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-slate-600 mb-4">
+                <p className="text-sm text-muted-foreground mb-4">
                   Real financial data including Revenue, Net Income, ROE, Net Margin, Net Debt, EBITDA, and dividend percentages for companies that pay dividends.
                 </p>
                 <Button 
@@ -164,7 +164,7 @@ export default function Dashboard() {
             
             <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-lg text-slate-900">Data Coverage</CardTitle>
+                <CardTitle className="text-lg text-foreground">Data Coverage</CardTitle>
                 <CardDescription>5-year financial history (2019-2023)</CardDescription>
               </CardHeader>
               <CardContent>
@@ -193,7 +193,7 @@ export default function Dashboard() {
           {/* Brazilian Stocks */}
           <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm mb-6">
             <CardHeader>
-              <CardTitle className="text-xl text-slate-900">Brazilian Stocks - Financial Data (2019-2023)</CardTitle>
+              <CardTitle className="text-xl text-foreground">Brazilian Stocks - Financial Data (2019-2023)</CardTitle>
               <CardDescription>Receita Líquida, Lucro Líquido, ROE, Margem Líquida, Dívida Líquida, EBITDA</CardDescription>
             </CardHeader>
             <CardContent>
@@ -210,7 +210,7 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">PETR4</td>
                       <td className="p-2">Petrobras PN</td>
                       <td className="p-2">24.8%</td>
@@ -218,7 +218,7 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">12.45%</td>
                       <td className="p-2">78% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">VALE3</td>
                       <td className="p-2">Vale ON</td>
                       <td className="p-2">13.2%</td>
@@ -226,7 +226,7 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">18.67%</td>
                       <td className="p-2">15% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">ITUB4</td>
                       <td className="p-2">Itaú Unibanco PN</td>
                       <td className="p-2">19.2%</td>
@@ -234,7 +234,7 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">6.78%</td>
                       <td className="p-2">20% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">WEGE3</td>
                       <td className="p-2">WEG ON</td>
                       <td className="p-2">21.3%</td>
@@ -251,7 +251,7 @@ export default function Dashboard() {
           {/* US Stocks */}
           <Card className="border border-border shadow-xl bg-card/70 backdrop-blur-sm mb-6">
             <CardHeader>
-              <CardTitle className="text-xl text-slate-900">US Stocks - Financial Data (2019-2023)</CardTitle>
+              <CardTitle className="text-xl text-foreground">US Stocks - Financial Data (2019-2023)</CardTitle>
               <CardDescription>Net Revenue, Net Income, ROE, Net Margin, Net Debt, EBITDA</CardDescription>
             </CardHeader>
             <CardContent>
@@ -268,7 +268,7 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">AAPL</td>
                       <td className="p-2">Apple Inc.</td>
                       <td className="p-2">160.6%</td>
@@ -276,7 +276,7 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">0.43%</td>
                       <td className="p-2">47% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">MSFT</td>
                       <td className="p-2">Microsoft Corporation</td>
                       <td className="p-2">40.0%</td>
@@ -284,7 +284,7 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">0.68%</td>
                       <td className="p-2">68% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">NVDA</td>
                       <td className="p-2">NVIDIA Corporation</td>
                       <td className="p-2">36.0%</td>
@@ -292,12 +292,12 @@ export default function Dashboard() {
                       <td className="p-2 text-green-600 font-semibold">0.09%</td>
                       <td className="p-2">458% (2019-2023)</td>
                     </tr>
-                    <tr className="border-b hover:bg-slate-50">
+                    <tr className="border-b hover:bg-muted/50">
                       <td className="p-2 font-semibold">TSLA</td>
                       <td className="p-2">Tesla Inc.</td>
                       <td className="p-2">28.1%</td>
                       <td className="p-2">15.5%</td>
-                      <td className="p-2 text-gray-500">0.00%</td>
+                      <td className="p-2 text-muted-foreground">0.00%</td>
                       <td className="p-2">294% (2019-2023)</td>
                     </tr>
                   </tbody>
@@ -314,14 +314,14 @@ export default function Dashboard() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-xl text-slate-900">Global Markets</CardTitle>
+                  <CardTitle className="text-xl text-foreground">Global Markets</CardTitle>
                   <CardDescription>USA & Brazil Investments</CardDescription>
                 </div>
                 <Badge variant="secondary">🌍 2 Countries</Badge>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 Comprehensive investment data from US and Brazilian markets.
               </p>
               <Button 
@@ -339,14 +339,14 @@ export default function Dashboard() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-xl text-slate-900">ETFs</CardTitle>
+                  <CardTitle className="text-xl text-foreground">ETFs</CardTitle>
                   <CardDescription>Exchange-Traded Funds</CardDescription>
                 </div>
                 <Badge variant="secondary">{etfs.length} funds</Badge>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 Diversified exposure to various market sectors and indices.
               </p>
               <Button 
@@ -364,14 +364,14 @@ export default function Dashboard() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-xl text-slate-900">Stocks</CardTitle>
+                  <CardTitle className="text-xl text-foreground">Stocks</CardTitle>
                   <CardDescription>Individual Companies</CardDescription>
                 </div>
                 <Badge variant="secondary">{stocks.length} stocks</Badge>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 Direct ownership in leading companies across various industries.
               </p>
               <Button 
@@ -389,14 +389,14 @@ export default function Dashboard() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-xl text-slate-900">Bonds</CardTitle>
+                  <CardTitle className="text-xl text-foreground">Bonds</CardTitle>
                   <CardDescription>Fixed Income Securities</CardDescription>
                 </div>
                 <Badge variant="secondary">{bonds.length} bonds</Badge>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-slate-600 mb-4">
+              <p className="text-sm text-muted-foreground mb-4">
                 Stable income generation through government and corporate bonds.
               </p>
               <Button 

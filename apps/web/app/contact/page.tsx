@@ -50,10 +50,10 @@ export default function Contact() {
             <Badge variant="secondary" className="mb-6 text-sm font-medium px-4 py-2">
               💬 {t('contact.title')}
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-900 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
               {t('contact.title')}
             </h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               {t('contact.subtitle')}
             </p>
           </div>
@@ -67,9 +67,9 @@ export default function Contact() {
             
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="h-full border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+              <Card className="h-full border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border">
                 <CardHeader className="pb-6">
-                  <CardTitle className="text-2xl font-bold text-slate-900">
+                  <CardTitle className="text-2xl font-bold text-foreground">
                     {t('contact.form.title')}
                   </CardTitle>
                 </CardHeader>
@@ -77,52 +77,52 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                           {t('contact.form.name')}
                         </label>
                         <input 
                           type="text" 
                           id="name" 
                           required
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/50"
+                          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-200 bg-input"
                           placeholder={t('contact.form.namePlaceholder')}
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                           {t('contact.form.email')}
                         </label>
                         <input 
                           type="email" 
                           id="email" 
                           required
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/50"
+                          className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-200 bg-input"
                           placeholder={t('contact.form.emailPlaceholder')}
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                         {t('contact.form.phone')}
                       </label>
                       <input 
                         type="tel" 
                         id="phone"
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/50"
+                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-200 bg-input"
                         placeholder={t('contact.form.phonePlaceholder')}
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                         {t('contact.form.message')}
                       </label>
                       <textarea 
                         id="message" 
                         rows={5}
                         required
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white/50 resize-none"
+                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-200 bg-input resize-none"
                         placeholder={t('contact.form.messagePlaceholder')}
                       />
                     </div>
@@ -151,9 +151,9 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="space-y-6">
-              <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+              <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border">
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold text-slate-900">
+                  <CardTitle className="text-xl font-bold text-foreground">
                     {t('contact.info.title')}
                   </CardTitle>
                 </CardHeader>
@@ -161,41 +161,41 @@ export default function Contact() {
                   <div className="flex items-start space-x-3">
                     <Mail className="h-5 w-5 text-blue-600 mt-1" />
                     <div>
-                      <p className="font-medium text-slate-900">{t('contact.info.email')}</p>
-                      <p className="text-slate-600">{t('contact.info.values.email')}</p>
+                      <p className="font-medium text-foreground">{t('contact.info.email')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.values.email')}</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <Phone className="h-5 w-5 text-blue-600 mt-1" />
                     <div>
-                      <p className="font-medium text-slate-900">{t('contact.info.phone')}</p>
-                      <p className="text-slate-600">{t('contact.info.values.phone')}</p>
+                      <p className="font-medium text-foreground">{t('contact.info.phone')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.values.phone')}</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600 mt-1" />
                     <div>
-                      <p className="font-medium text-slate-900">{t('contact.info.location')}</p>
-                      <p className="text-slate-600">{t('contact.info.values.location')}</p>
+                      <p className="font-medium text-foreground">{t('contact.info.location')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.values.location')}</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <Clock className="h-5 w-5 text-blue-600 mt-1" />
                     <div>
-                      <p className="font-medium text-slate-900">{t('contact.info.availability')}</p>
-                      <p className="text-slate-600">{t('contact.info.values.availability')}</p>
+                      <p className="font-medium text-foreground">{t('contact.info.availability')}</p>
+                      <p className="text-muted-foreground">{t('contact.info.values.availability')}</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Features */}
-              <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+              <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border">
                 <CardContent className="pt-6">
-                  <h3 className="font-bold text-slate-900 mb-4">Why Choose Us?</h3>
+                  <h3 className="font-bold text-foreground mb-4">Why Choose Us?</h3>
                   <div className="space-y-3">
                     {(() => {
                       const features = safeT('contact.features', [
@@ -213,7 +213,7 @@ export default function Contact() {
                       return featureArray.map((feature: string, index: number) => (
                         <div key={index} className="flex items-center space-x-3">
                           <CheckCircle className="h-4 w-4 text-green-500" />
-                          <span className="text-sm text-slate-600">{feature}</span>
+                          <span className="text-sm text-muted-foreground">{feature}</span>
                         </div>
                       ));
                     })()}

@@ -136,13 +136,17 @@ export default function Home() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" suppressHydrationWarning={true}>
-              <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
-                {isClient ? t('hero.ctaPrimary') : 'Get Started Today'}
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button asChild size="lg" className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold text-lg px-8 py-4 shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300">
+                <Link href="/contact">
+                  {isClient ? t('hero.ctaPrimary') : 'Get Your Free Strategy Call'}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-foreground/30 text-foreground hover:bg-foreground/10 backdrop-blur-sm">
-                <Play className="mr-2 h-5 w-5" />
-                {isClient ? t('hero.ctaSecondary') : 'Watch Demo'}
+              <Button asChild size="lg" variant="outline" className="border-foreground/30 text-foreground hover:bg-foreground/10 backdrop-blur-sm">
+                <Link href="/portfolio">
+                  <Play className="mr-2 h-5 w-5" />
+                  {isClient ? t('hero.ctaSecondary') : 'Watch Success Stories'}
+                </Link>
               </Button>
             </div>
 
@@ -230,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-gray-50 dark:bg-slate-800">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16" suppressHydrationWarning={true}>
             <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white">
@@ -276,7 +280,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/80 dark:bg-white/10 backdrop-blur-md border-gray-200/50 dark:border-white/20 text-gray-900 dark:text-white hover:bg-white/90 dark:hover:bg-white/15 transition-all duration-300">
+              <Card key={index} className="bg-card/80 backdrop-blur-md border-border hover:border-primary/30 text-foreground hover:bg-card/90 transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <Avatar className="border-2 border-gray-200 dark:border-white/20">

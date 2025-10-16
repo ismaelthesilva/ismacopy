@@ -124,7 +124,7 @@ export default function About() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {journey.map((step, index) => (
-                <Card key={index} className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
+                <Card key={index} className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border hover:shadow-2xl transition-all duration-300">
                   <CardHeader className="text-center pb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
                       {step.icon}
@@ -133,7 +133,7 @@ export default function About() {
                     <Badge variant="outline" className="text-xs">{step.period}</Badge>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-slate-600 leading-relaxed">{step.description}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -146,7 +146,7 @@ export default function About() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-xl bg-white/70 backdrop-blur-sm">
+            <Card className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border">
               <CardContent className="p-8 md:p-12">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-6 border-2 border-blue-200">
@@ -157,12 +157,12 @@ export default function About() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900">{t('about.personal.name')}</h3>
+                    <h3 className="text-2xl font-bold text-foreground">{t('about.personal.name')}</h3>
                     <p className="text-lg text-blue-600">{t('about.personal.title')}</p>
                   </div>
                 </div>
                 
-                <div className="prose prose-lg text-slate-600 leading-relaxed">
+                <div className="prose prose-lg text-muted-foreground leading-relaxed">
                   <p className="mb-4">
                     {t('about.personal.story.paragraph1')}
                   </p>
@@ -190,24 +190,24 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">{t('about.services.title')}</h2>
-              <p className="text-lg text-slate-600">{t('about.services.subtitle')}</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">{t('about.services.title')}</h2>
+              <p className="text-lg text-muted-foreground">{t('about.services.subtitle')}</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+                <Card key={index} className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
                   <CardHeader className="text-center flex-shrink-0">
-                    <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-muted/50 rounded-full flex items-center justify-center mx-auto mb-4">
                       {service.icon}
                     </div>
-                    <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
-                    <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                     <div className="space-y-2 mt-auto">
                       {Array.isArray(service.features) && service.features.map((feature: string, featureIndex: number) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-slate-600">
+                        <div key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
@@ -226,19 +226,19 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">{t('about.values.title')}</h2>
-              <p className="text-lg text-slate-600">{t('about.values.subtitle')}</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">{t('about.values.title')}</h2>
+              <p className="text-lg text-muted-foreground">{t('about.values.subtitle')}</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
-                <Card key={index} className="border-0 shadow-xl bg-white/70 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 text-center">
+                <Card key={index} className="border-0 shadow-xl bg-card/70 backdrop-blur-sm border border-border hover:shadow-2xl transition-all duration-300 text-center">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-12 h-12 bg-muted/50 rounded-full flex items-center justify-center mx-auto mb-4">
                       {value.icon}
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-3">{value.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">{value.description}</p>
+                    <h3 className="text-lg font-bold text-foreground mb-3">{value.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -258,11 +258,11 @@ export default function About() {
                   {t('about.cta.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50">
+                  <Button size="lg" variant="secondary" className="bg-card text-primary hover:bg-muted border border-border">
                     {t('about.cta.strategyCall')}
                   </Button>
                   <Link href="/portfolio">
-                    <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 w-full">
+                    <Button size="lg" variant="secondary" className="bg-card text-primary hover:bg-muted border border-border w-full">
                       {t('about.cta.portfolio')}
                     </Button>
                   </Link>

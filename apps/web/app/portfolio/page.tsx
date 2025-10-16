@@ -124,7 +124,7 @@ export default function Portfolio() {
           <h1 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {t('portfolio.title')}
           </h1>
-          <div className="max-w-5xl mx-auto bg-white dark:bg-slate-800 p-10 rounded-xl shadow-xl border">
+          <div className="max-w-5xl mx-auto bg-card p-10 rounded-xl shadow-xl border">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Code className="h-8 w-8 text-blue-600" />
               <h2 className="text-4xl font-bold">Full-Stack Developer + Copywriter</h2>
@@ -155,7 +155,7 @@ export default function Portfolio() {
             </div>
 
             {/* Tech Stack Display */}
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+            <div className="bg-muted/50 p-6 rounded-lg mb-6">
               <h3 className="font-bold text-lg mb-4 text-center">💻 Technology Arsenal</h3>
               <div className="grid md:grid-cols-4 gap-4 text-sm">
                 <div>
@@ -209,7 +209,7 @@ export default function Portfolio() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {portfolioPages.map((project) => (
-              <div key={project.name} className="bg-white dark:bg-slate-800 rounded-xl shadow-xl border overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div key={project.name} className="bg-card rounded-xl shadow-xl border overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative">
                   <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
                   <div className="absolute top-4 left-4">
@@ -227,7 +227,7 @@ export default function Portfolio() {
                     <h4 className="font-semibold mb-2 text-sm text-blue-600">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
-                        <span key={tech} className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-sm">
+                        <span key={tech} className="bg-secondary text-secondary-foreground px-2 py-1 rounded text-sm">
                           {tech}
                         </span>
                       ))}
@@ -282,7 +282,7 @@ export default function Portfolio() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {marketingProjects.map((project) => (
-              <div key={project.name} className="bg-white dark:bg-slate-800 rounded-xl shadow-xl border overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div key={project.name} className="bg-card rounded-xl shadow-xl border overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative">
                   <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
                   <div className="absolute top-4 left-4">
@@ -344,7 +344,7 @@ export default function Portfolio() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {adCreatives.map((ad) => (
-              <div key={ad.name} className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border overflow-hidden hover:shadow-xl transition-shadow">
+              <div key={ad.name} className="bg-card rounded-xl shadow-lg border overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="relative">
                   <img src={ad.image} alt={ad.name} className="w-full h-48 object-cover" />
                   <div className="absolute top-4 left-4">
@@ -396,7 +396,7 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg"
+                className="inline-flex items-center px-8 py-4 bg-card text-primary rounded-lg hover:bg-muted/80 border border-border transition-colors font-bold text-lg"
               >
                 <Zap className="mr-2 h-5 w-5" />
                 Let's Work Together
