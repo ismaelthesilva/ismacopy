@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
-import { useLanguage } from '../../contexts/LanguageContext';
 import { 
   User,
   TrendingUp,
@@ -21,8 +20,33 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+// Disable static generation for this page
+export const dynamic = 'force-dynamic';
+
 export default function About() {
-  const { t } = useLanguage();
+  // Fallback translation function
+  const t = (key: string, options?: any): any => {
+    const fallbacks: Record<string, any> = {
+      'about.title': 'About Me',
+      'about.subtitle': 'Full-Stack Developer & Copywriter',
+      'about.journey.steps.beginning.title': 'The Beginning',
+      'about.journey.steps.beginning.period': '2020-2021',
+      'about.journey.steps.growth.title': 'Growth Phase',
+      'about.journey.steps.growth.period': '2021-2022',
+      'about.journey.steps.mastery.title': 'Mastery',
+      'about.journey.steps.mastery.period': '2023-Present',
+      'about.services.development.title': 'Web Development',
+      'about.services.development.features': ['React & Next.js', 'Full-Stack Applications', 'Responsive Design'],
+      'about.services.copywriting.title': 'Copywriting',
+      'about.services.copywriting.features': ['Sales Copy', 'Content Strategy', 'Brand Voice'],
+      'about.services.strategy.title': 'Strategy',
+      'about.services.strategy.features': ['Digital Marketing', 'Growth Strategy', 'Analytics'],
+      'about.features': ['Web Development', 'Copywriting', 'UI/UX Design'],
+      'about.skills': ['React', 'Next.js', 'Node.js', 'TypeScript'],
+      'about.values': ['Quality', 'Innovation', 'Reliability']
+    };
+    return fallbacks[key] || key;
+  };
 
   const journey = [
     {

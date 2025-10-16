@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ClientWrapper from "../components/ClientWrapper";
 import "./globals.css";
@@ -13,11 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Ismael Silva - Web Developer & Copywriter",
-  description: "Full-stack developer with copywriting expertise. Creating high-converting web applications.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -27,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         <ClientWrapper>
           {children}

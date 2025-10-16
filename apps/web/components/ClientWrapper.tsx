@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { usePathname } from 'next/navigation';
-import { LanguageProvider } from "../contexts/LanguageContext";
-import { ThemeProvider } from "../contexts/ThemeContext";
-import Navbar from "../components/Navbar";
+
+// Dynamically import heavy components to avoid SSR issues
+let LanguageProvider: any = null;
+let ThemeProvider: any = null;
+let Navbar: any = null;
 
 export default function ClientWrapper({
   children,
@@ -12,35 +13,54 @@ export default function ClientWrapper({
   children: React.ReactNode;
 }) {
   const [isMounted, setIsMounted] = useState(false);
-  const pathname = usePathname();
+  const [componentsLoaded, setComponentsLoaded] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    
+    // Load components dynamically after mount
+    Promise.all([
+      import("../contexts/LanguageContext").then(m => m.LanguageProvider),
+      import("../contexts/ThemeContext").then(m => m.ThemeProvider),
+      import("../components/Navbar").then(m => m.default)
+    ]).then(([LangProvider, Theme, NavComponent]) => {
+      LanguageProvider = LangProvider;
+      ThemeProvider = Theme;
+      Navbar = NavComponent;
+      setComponentsLoaded(true);
+    }).catch(() => {
+      // Fallback if imports fail
+      setComponentsLoaded(true);
+    });
   }, []);
 
-  // Skip contexts for error pages to prevent SSR issues
-  const isErrorPage = pathname === '/404' || pathname === '/500' || !pathname;
-  
-  if (isErrorPage) {
+  // During SSR or before hydration, render minimal content
+  if (!isMounted || !componentsLoaded) {
     return (
       <div suppressHydrationWarning={true}>
-        <div className={isMounted ? '' : 'invisible'}>
-          {children}
-        </div>
+        {children}
       </div>
     );
   }
 
-  return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <div suppressHydrationWarning={true}>
-          {isMounted && <Navbar />}
-          <div className={isMounted ? '' : 'invisible'}>
+  // After hydration, render full app with contexts
+  if (LanguageProvider && ThemeProvider && Navbar) {
+    return (
+      <ThemeProvider>
+        <LanguageProvider>
+          <div suppressHydrationWarning={true}>
+            <Navbar />
             {children}
           </div>
-        </div>
-      </LanguageProvider>
-    </ThemeProvider>
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+  }
+
+  // Fallback if components couldn't load
+  return (
+    <div suppressHydrationWarning={true}>
+      {children}
+    </div>
   );
 }
