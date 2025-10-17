@@ -1,11 +1,58 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import ClientWrapper from "../components/ClientWrapper";
 import "./globals.css";
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'ismaCopy - Digital Marketing & Investment Strategies',
-  description: 'Expert copywriting, web development, and investment analysis. Transform your business with data-driven strategies.',
-};
+// This is where you update SEO info, favicon, title, etc.
+export const metadata: Metadata = {
+  title: 'ismaCopy - Digital Solutions Expert',
+  description: 'Fullstack development and conversion copywriting services. From motivational speaker to digital expert.',
+  keywords: ['web development', 'copywriting', 'digital marketing', 'Next.js', 'React'],
+  authors: [{ name: 'Ismael Silva' }],
+  
+  // Favicon and icons
+  icons: {
+    icon: '/ismacopyfavicon.ico',
+    apple: '/apple-icon.png',
+    shortcut: '/ismacopyfavicon.ico',
+  },
+  
+  // Open Graph (social media sharing)
+  openGraph: {
+    title: 'ismaCopy - Digital Solutions Expert',
+    description: 'Fullstack development and conversion copywriting services',
+    url: 'https://ismaelsilva.com',
+    siteName: 'ismaCopy',
+    images: [
+      {
+        url: '/ismacopyLogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'ismaCopy - Digital Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  
+  // Twitter Card
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ismaCopy - Digital Solutions Expert',
+    description: 'Fullstack development and conversion copywriting services',
+    images: ['/og-image.png'],
+  },
+  
+  // Viewport and other meta tags
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  
+  // Additional meta tags
+  other: {
+    'theme-color': '#3b82f6',
+    'color-scheme': 'light dark',
+  },
+}
 
 export const viewport = {
   themeColor: [
@@ -31,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="transition-colors duration-300">
+    <html lang="en" className="transition-colors duration-300" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -48,8 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased theme-transition`}
-        suppressHydrationWarning={true}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased theme-transition bg-background text-foreground`}
       >
         <ClientWrapper>
           {children}
