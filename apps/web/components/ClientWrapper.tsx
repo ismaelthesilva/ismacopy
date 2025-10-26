@@ -1,11 +1,15 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import { LanguageProvider } from "../contexts/LanguageContext";
+import { ThemeProvider } from "../contexts/ThemeContext";
+import dynamic from 'next/dynamic';
 
-// Dynamically import heavy components to avoid SSR issues
-let LanguageProvider: any = null;
-let ThemeProvider: any = null;
-let Navbar: any = null;
+// Dynamically import Navbar with no SSR
+const Navbar = dynamic(
+  () => import("../components/Navbar"),
+  { ssr: false }
+);
 
 export default function ClientWrapper({
   children,
@@ -13,43 +17,17 @@ export default function ClientWrapper({
   children: React.ReactNode;
 }) {
   const [isMounted, setIsMounted] = useState(false);
-  const [componentsLoaded, setComponentsLoaded] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
-    
-    // Load components dynamically after mount
-    Promise.all([
-      import("../contexts/LanguageContext").then(m => m.LanguageProvider),
-      import("../contexts/ThemeContext").then(m => m.ThemeProvider),
-      import("../components/Navbar").then(m => m.default)
-    ]).then(([LangProvider, Theme, NavComponent]) => {
-      LanguageProvider = LangProvider;
-      ThemeProvider = Theme;
-      Navbar = NavComponent;
-      setComponentsLoaded(true);
-    }).catch(() => {
-      // Fallback if imports fail
-      setComponentsLoaded(true);
-    });
   }, []);
 
-  // During SSR or before hydration, render minimal content
-  if (!isMounted || !componentsLoaded) {
-    return (
-      <div suppressHydrationWarning={true}>
-        {children}
-      </div>
-    );
-  }
-
-  // After hydration, render full app with contexts
-  if (LanguageProvider && ThemeProvider && Navbar) {
+  // During SSR, render minimal content without navbar
+  if (!isMounted) {
     return (
       <ThemeProvider>
         <LanguageProvider>
           <div suppressHydrationWarning={true}>
-            <Navbar />
             {children}
           </div>
         </LanguageProvider>
@@ -57,10 +35,15 @@ export default function ClientWrapper({
     );
   }
 
-  // Fallback if components couldn't load
+  // After hydration, render full app with navbar
   return (
-    <div suppressHydrationWarning={true}>
-      {children}
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div suppressHydrationWarning={true}>
+          <Navbar />
+          {children}
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }

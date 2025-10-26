@@ -43,15 +43,8 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   
-  // Viewport and other meta tags
-  viewport: 'width=device-width, initial-scale=1',
+  // Meta tags
   robots: 'index, follow',
-  
-  // Additional meta tags
-  other: {
-    'theme-color': '#3b82f6',
-    'color-scheme': 'light dark',
-  },
 }
 
 export const viewport = {
