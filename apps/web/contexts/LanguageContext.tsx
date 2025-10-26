@@ -65,7 +65,7 @@ const translations: Record<string, any> = {
   pt: ptTranslations
 };
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<string>('en');
   const [isClient, setIsClient] = useState(false);
 
