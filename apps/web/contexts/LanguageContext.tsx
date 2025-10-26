@@ -65,7 +65,7 @@ const translations: Record<string, any> = {
   pt: ptTranslations
 };
 
-export const LanguageProvider = ({ children }: LanguageProviderProps) => {
+export const LanguageProvider = ({ children }: LanguageProviderProps): JSX.Element => {
   const [language, setLanguage] = useState<string>('en');
   const [isClient, setIsClient] = useState(false);
 

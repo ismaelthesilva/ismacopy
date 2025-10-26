@@ -2,6 +2,10 @@
 
 import Link from 'next/link';
 
+// Force dynamic rendering to avoid SSR issues
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">

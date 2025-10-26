@@ -35,7 +35,7 @@ export const useTheme = (): ThemeContextType => {
   }
 };
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => {
   const [theme, setTheme] = useState<string>('light');
 
   useEffect(() => {
