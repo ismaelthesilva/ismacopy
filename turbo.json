@@ -4,10 +4,11 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [
-        "dist/**",
         ".next/**",
-        "!.next/cache/**"
-      ]
+        "!.next/cache/**",
+        "dist/**"
+      ],
+      "env": ["NODE_ENV"]
     },
     "dev": {
       "cache": false,
