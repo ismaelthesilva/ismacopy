@@ -5,44 +5,78 @@ import type { Metadata } from 'next'
 
 // This is where you update SEO info, favicon, title, etc.
 export const metadata: Metadata = {
-  title: 'ismaCopy - Digital Solutions Expert',
-  description: 'Fullstack development and conversion copywriting services. From motivational speaker to digital expert.',
-  keywords: ['web development', 'copywriting', 'digital marketing', 'Next.js', 'React'],
+    metadataBase: new URL('https://ismaelsilva.com'),
+  title: 'Base Logic Labs – Product Studio',
+  description: 'Base Logic Labs is a premium product studio bridging Silicon Valley-grade engineering and sales psychology. We architect revenue engines for ambitious SaaS founders and enterprise teams.',
+  keywords: [
+    'Base Logic Labs',
+    'product studio',
+    'SaaS',
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'engineering',
+    'sales psychology',
+    'enterprise',
+    'staff augmentation',
+    'product strategy',
+    'design',
+    'New Zealand',
+    'Ismael Silva',
+    'global SaaS',
+    'vertical SaaS',
+    'fitness',
+    'BJJ',
+    'cloud',
+    'AWS',
+    'Prisma',
+    'PostgreSQL',
+    'supabase',
+    'multi-language',
+    'EN',
+    'PT',
+    'investment dashboard',
+    'secure authentication',
+    'UI/UX',
+    'portfolio',
+    'rapid product launch'
+  ],
   authors: [{ name: 'Ismael Silva' }],
-  
+
   // Favicon and icons
   icons: {
-    icon: '/ismacopyfavicon.ico',
-    apple: '/apple-icon.png',
-    shortcut: '/ismacopyfavicon.ico',
+    icon: '/images/codeBaseLogoSquare2.png',
+    apple: '/images/codeBaseLogoSquare2.png',
+    shortcut: '/images/codeBaseLogoSquare2.png',
   },
-  
+
   // Open Graph (social media sharing)
   openGraph: {
-    title: 'ismaCopy - Digital Solutions Expert',
-    description: 'Fullstack development and conversion copywriting services',
+    title: 'Base Logic Labs – Product Studio',
+    description: 'Premium product studio bridging Silicon Valley-grade engineering and sales psychology. We architect revenue engines for SaaS founders and enterprise teams.',
     url: 'https://ismaelsilva.com',
-    siteName: 'ismaCopy',
+    siteName: 'Base Logic Labs',
     images: [
       {
-        url: '/ismacopyLogo.png',
+        url: '/images/codeBaseLogoSquare2.png',
         width: 1200,
         height: 630,
-        alt: 'ismaCopy - Digital Solutions',
+        alt: 'Base Logic Labs Logo',
       },
     ],
     locale: 'en_US',
     type: 'website',
   },
-  
+
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'ismaCopy - Digital Solutions Expert',
-    description: 'Fullstack development and conversion copywriting services',
-    images: ['/og-image.png'],
+    title: 'Base Logic Labs – Product Studio',
+    description: 'Premium product studio bridging Silicon Valley-grade engineering and sales psychology. Revenue engines for SaaS founders and enterprise teams.',
+    images: ['/images/codeBaseLogoSquare2.png'],
+    site: '@ismaelsilva',
   },
-  
+
   // Meta tags
   robots: 'index, follow',
 }
