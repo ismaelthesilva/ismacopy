@@ -1,0 +1,11 @@
+// Minimal valid Prisma schema to allow build to succeed
+// You can edit this later for your actual models
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
